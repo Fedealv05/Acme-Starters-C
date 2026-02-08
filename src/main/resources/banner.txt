@@ -1,0 +1,9 @@
+    _                         ____  _             _                      ____ 
+   / \   ___ _ __ ___   ___  / ___|| |_ __ _ _ __| |_ ___ _ __ ___      / ___|
+  / _ \ / __| '_ ` _ \ / _ \ \___ \| __/ _` | '__| __/ _ \ '__/ __|    | |    
+ / ___ \ (__| | | | | |  __/  ___) | || (_| | |  | ||  __/ |  \__ \    | |___ 
+/_/   \_\___|_| |_| |_|\___| |____/ \__\__,_|_|   \__\___|_|  |___/     \____|
+
+Application endpoint: http://localhost:${server.port}${server.servlet.context-path}${server.servlet.initial-query}
+Database endpoint:    ${spring.datasource.url}
+Powered by:           Java EE ${java.version}, Spring Boot ${spring-boot.version}, Acme Framework ${acme.framework.version}
