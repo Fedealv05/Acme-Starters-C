@@ -81,7 +81,7 @@ public class Strategy extends AbstractEntity {
 			long diff = this.endMoment.getTime() - this.startMoment.getTime();
 			// Conversión a meses aproximados (ms -> meses)
 			result = diff / (1000.0 * 60 * 60 * 24 * 30);
-			result = Math.round(result * 10.0) / 10.0; // Redondeo a 1 decimal
+			result = Math.round(result * 10.0) / 10.0;
 		}
 		return result;
 	}

@@ -34,7 +34,7 @@ public class Tactic extends AbstractEntity {
 	private String				notes;
 
 	@Mandatory
-	//@ValidScore // Esta validación es la que pide el UML para el porcentaje
+	//@ValidScore 
 	@Column
 	private Double				expectedPercentage;
 
