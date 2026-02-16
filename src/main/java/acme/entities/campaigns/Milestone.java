@@ -2,12 +2,14 @@
 package acme.entities.campaigns;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.datatypes.MilestoneKind;
 
+@Entity
 public class Milestone extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;

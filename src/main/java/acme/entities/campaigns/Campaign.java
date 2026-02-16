@@ -3,8 +3,6 @@ package acme.entities.campaigns;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
@@ -45,12 +43,12 @@ public class Campaign extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@Temporal(TemporalType.TIMESTAMP)
+	//@Temporal(TemporalType.TIMESTAMP)
 	//@ValidMoment(future) 
 	private Moment				startMoment;
 
 	@Mandatory
-	@Temporal(TemporalType.TIMESTAMP)
+	//@Temporal(TemporalType.TIMESTAMP)
 	//@ValidMoment(future)
 	private Moment				endMoment;
 

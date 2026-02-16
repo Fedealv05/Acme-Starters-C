@@ -7,7 +7,7 @@ import acme.client.repositories.AbstractRepository;
 
 public interface DonationRepository extends AbstractRepository {
 
-	@Query("SELECT SUM(d.money) FROM Donation d WHERE d.sponsorship.id = :sponsorshipId")
+	@Query("SELECT SUM(d.money.amount) FROM Donation d WHERE d.sponsorship.id = :sponsorshipId")
 	Double totalMoneyBySponsorshipId(int sponsorshipId);
 
 }
