@@ -9,6 +9,8 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
@@ -22,6 +24,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Sponsorship extends AbstractEntity {
+
+	@Autowired
+	@Transient
+	private DonationRepository	donationRepository;
 
 	private static final long	serialVersionUID	= 1L;
 
@@ -82,8 +88,9 @@ public class Sponsorship extends AbstractEntity {
 
 	@Transient
 	//@ValidMoney(positive = true)
-	public double getTotalMoney() {
-		return 0.0;
+	public Double calculateTotalMoney(final Sponsorship s) {
+		Double total = this.donationRepository.totalMoneyBySponsorshipId(s.getId());
+		return total != null ? total : 0.0;
 	}
 
 }
