@@ -1,5 +1,5 @@
 
-package acme.entities;
+package acme.entities.sponsorships;
 
 import org.springframework.data.jpa.repository.Query;
 

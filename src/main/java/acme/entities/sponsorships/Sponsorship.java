@@ -1,9 +1,11 @@
 
-package acme.entities;
+package acme.entities.sponsorships;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
@@ -46,12 +48,12 @@ public class Sponsorship extends AbstractEntity {
 
 	@Mandatory
 	//@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
-	//@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Moment				startMoment;
 
 	@Mandatory
 	//@ValidMoment(constraint = future)
-	//@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Moment				endMoment;
 
 	@Optional
