@@ -1,9 +1,10 @@
 
-package acme.entities;
+package acme.entities.campaigns;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
@@ -14,24 +15,23 @@ import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidUrl;
-import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Sponsorship extends AbstractEntity {
+public class Campaign extends AbstractEntity {
 
 	@Autowired
 	@Transient
-	private DonationRepository	donationRepository;
+	private MilestoneRepository	repository;
 
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	//@ValidTicker
 	@Column(unique = true)
+	//@ValidTicker 
 	private String				ticker;
 
 	@Mandatory
@@ -45,13 +45,13 @@ public class Sponsorship extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	//@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
-	//@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP)
+	//@ValidMoment(future) 
 	private Moment				startMoment;
 
 	@Mandatory
-	//@ValidMoment(constraint = future)
-	//@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP)
+	//@ValidMoment(future)
 	private Moment				endMoment;
 
 	@Optional
@@ -59,22 +59,11 @@ public class Sponsorship extends AbstractEntity {
 	@Column
 	private String				moreInfo;
 
-	@Mandatory
-	@Valid
-	@Column
-	private Boolean				draftMode;
 
-	@Mandatory
-	@Valid
-	@ManyToOne(optional = false)
-	private Sponsor				sponsor;
-
-	// Derived attributes (Methods) -------------------------------------------
-
-
+	//@Mandatory
 	@Transient
 	@Valid
-	public Double getMonthsActive() {
+	public Double monthsActive() {
 		double result = 0.0;
 		if (this.startMoment != null && this.endMoment != null) {
 			long diff = this.endMoment.getTime() - this.startMoment.getTime();
@@ -84,11 +73,17 @@ public class Sponsorship extends AbstractEntity {
 		return result;
 	}
 
+	//@Mandatory
 	@Transient
-	//@ValidMoney(positive = true)
-	public Double calculateTotalMoney(final Sponsorship s) {
-		Double total = this.donationRepository.totalMoneyBySponsorshipId(s.getId());
-		return total != null ? total : 0.0;
+	//@ValidNumber(positive)
+	public Double effort() {
+		return this.repository.findTotalEffortByCampaignId(this.getId());
 	}
+
+
+	@Mandatory
+	@Valid
+	@Column
+	private Boolean draftmode;
 
 }
