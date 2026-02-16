@@ -1,13 +1,12 @@
 
 package acme.entities.inventions;
 
-import java.beans.Transient;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ import lombok.Setter;
 public class Invention extends AbstractEntity {
 
 	@Autowired
-	//@Transient
+	@Transient
 	private PartRepository		repository;
 
 	private static final long	serialVersionUID	= 1L;
@@ -93,6 +92,7 @@ public class Invention extends AbstractEntity {
 		Double sum = this.repository.sumPriceByInventionId(this.getId());
 		Money result = new Money();
 		result.setAmount(sum);
+		result.setCurrency("EURO");
 		return result;
 	}
 
