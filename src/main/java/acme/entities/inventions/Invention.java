@@ -1,5 +1,5 @@
 
-package acme.entities;
+package acme.entities.inventions;
 
 import java.beans.Transient;
 
@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Moment;
@@ -24,6 +26,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Invention extends AbstractEntity {
+
+	@Autowired
+	//@Transient
+	private PartRepository		repository;
 
 	private static final long	serialVersionUID	= 1L;
 
@@ -43,7 +49,7 @@ public class Invention extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	//@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	//@ValidMoment(check = ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Moment				startMoment;
 
@@ -83,9 +89,10 @@ public class Invention extends AbstractEntity {
 	//@Mandatory
 	@Transient
 	//@ValidMoney(min = 0)
-	public Money getCost() {
-
+	public Money cost() {
+		Double sum = this.repository.sumPriceByInventionId(this.getId());
 		Money result = new Money();
+		result.setAmount(sum);
 		return result;
 	}
 
