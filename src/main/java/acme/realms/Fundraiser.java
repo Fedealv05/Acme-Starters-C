@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
+import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,12 +23,12 @@ public class Fundraiser extends AbstractRole {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	//@ValidHeader // Basado en el estereotipo del UML { Mandatory, ValidHeader, Column }
+	//@ValidHeader 
 	@Column
 	private String				bank;
 
 	@Mandatory
-	//@ValidText // Basado en el estereotipo del UML { Mandatory, ValidText, Column }
+	@ValidText
 	@Column
 	private String				statement;
 
@@ -35,9 +36,5 @@ public class Fundraiser extends AbstractRole {
 	@Valid
 	@Column
 	private Boolean				agent;
-
-	// Derived attributes -----------------------------------------------------
-
-	// Relationships ----------------------------------------------------------
 
 }

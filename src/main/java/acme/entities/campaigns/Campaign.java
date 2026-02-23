@@ -1,18 +1,25 @@
 
 package acme.entities.campaigns;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidText;
+import acme.constraints.ValidTicker;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,7 +36,7 @@ public class Campaign extends AbstractEntity {
 
 	@Mandatory
 	@Column(unique = true)
-	//@ValidTicker 
+	@ValidTicker
 	private String				ticker;
 
 	@Mandatory
@@ -38,19 +45,19 @@ public class Campaign extends AbstractEntity {
 	private String				name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				description;
 
 	@Mandatory
-	//@Temporal(TemporalType.TIMESTAMP)
-	//@ValidMoment(future) 
-	private Moment				startMoment;
+	@Temporal(TemporalType.TIMESTAMP)
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	private Date				startMoment;
 
 	@Mandatory
-	//@Temporal(TemporalType.TIMESTAMP)
-	//@ValidMoment(future)
-	private Moment				endMoment;
+	@Temporal(TemporalType.TIMESTAMP)
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	private Date				endMoment;
 
 	@Optional
 	@ValidUrl
@@ -58,7 +65,6 @@ public class Campaign extends AbstractEntity {
 	private String				moreInfo;
 
 
-	//@Mandatory
 	@Transient
 	@Valid
 	public Double monthsActive() {
@@ -71,7 +77,6 @@ public class Campaign extends AbstractEntity {
 		return result;
 	}
 
-	//@Mandatory
 	@Transient
 	//@ValidNumber(positive)
 	public Double effort() {

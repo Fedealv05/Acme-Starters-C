@@ -8,6 +8,7 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
+import acme.constraints.ValidText;
 import acme.datatypes.TacticKind;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,11 +18,7 @@ import lombok.Setter;
 @Setter
 public class Tactic extends AbstractEntity {
 
-	// Serialisation version --------------------------------------------------
-
 	private static final long	serialVersionUID	= 1L;
-
-	// Attributes -------------------------------------------------------------
 
 	@Mandatory
 	//@ValidHeader
@@ -29,7 +26,7 @@ public class Tactic extends AbstractEntity {
 	private String				name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				notes;
 
