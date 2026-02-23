@@ -2,20 +2,26 @@
 package acme.entities.strategy;
 
 import java.util.Collection;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidText;
+import acme.constraints.ValidTicker;
 import acme.realms.Fundraiser;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,7 +34,7 @@ public class Strategy extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	//@ValidTicker
+	@ValidTicker
 	@Column(unique = true)
 	private String				ticker;
 
@@ -38,19 +44,19 @@ public class Strategy extends AbstractEntity {
 	private String				name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				description;
 
 	@Mandatory
-	//@ValidMoment(constraint = future)
-	//@Temporal(TemporalType.TIMESTAMP)
-	private Moment				startMoment;
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				startMoment;
 
 	@Mandatory
-	//@ValidMoment(constraint = future)
-	//@Temporal(TemporalType.TIMESTAMP)
-	private Moment				endMoment;
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				endMoment;
 
 	@Optional
 	@ValidUrl
@@ -71,15 +77,12 @@ public class Strategy extends AbstractEntity {
 	@OneToMany(mappedBy = "strategy")
 	private Collection<Tactic>	tactics;
 
-	// Atributos derivados (UML: /monthsActive y /expectedPercentage) ---------
-
 
 	@Transient
 	public Double getMonthsActive() {
 		double result = 0.0;
 		if (this.startMoment != null && this.endMoment != null) {
 			long diff = this.endMoment.getTime() - this.startMoment.getTime();
-			// Conversión a meses aproximados (ms -> meses)
 			result = diff / (1000.0 * 60 * 60 * 24 * 30);
 			result = Math.round(result * 10.0) / 10.0;
 		}
@@ -87,7 +90,6 @@ public class Strategy extends AbstractEntity {
 	}
 
 	@Transient
-	//@ValidScore // Basado en el UML
 	public Double getExpectedPercentage() {
 		double result = 0.0;
 		if (this.tactics != null)

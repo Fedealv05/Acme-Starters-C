@@ -1,19 +1,25 @@
 
 package acme.entities.sponsorships;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
 import acme.realms.Sponsor;
 import lombok.Getter;
@@ -41,19 +47,19 @@ public class Sponsorship extends AbstractEntity {
 	private String				name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				description;
 
 	@Mandatory
-	//@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
-	//@Temporal(TemporalType.TIMESTAMP)
-	private Moment				startMoment;
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				startMoment;
 
 	@Mandatory
-	//@ValidMoment(constraint = future)
-	//@Temporal(TemporalType.TIMESTAMP)
-	private Moment				endMoment;
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				endMoment;
 
 	@Optional
 	@ValidUrl
