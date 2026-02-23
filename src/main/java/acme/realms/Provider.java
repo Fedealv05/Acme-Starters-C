@@ -26,11 +26,7 @@ import lombok.Setter;
 @Setter
 public class Provider extends AbstractRole {
 
-	// Serialisation version --------------------------------------------------
-
 	private static final long	serialVersionUID	= 1L;
-
-	// Attributes -------------------------------------------------------------
 
 	@Mandatory
 	@ValidString
@@ -41,9 +37,5 @@ public class Provider extends AbstractRole {
 	@ValidString
 	@Column
 	private String				sector;
-
-	// Derived attributes -----------------------------------------------------
-
-	// Relationships ----------------------------------------------------------
 
 }

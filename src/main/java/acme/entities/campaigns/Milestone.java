@@ -4,10 +4,13 @@ package acme.entities.campaigns;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.ValidNumber;
 import acme.constraints.ValidHeader;
+import acme.constraints.ValidText;
 import acme.datatypes.MilestoneKind;
 
 @Entity
@@ -21,17 +24,17 @@ public class Milestone extends AbstractEntity {
 	private String				title;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				achievements;
 
 	@Mandatory
-	//@ValidNumber(positive)
+	@ValidNumber(min = 0)
 	@Column
 	private Double				effort;
 
 	@Mandatory
-	//@Valid
+	@Valid
 	@Column
 	private MilestoneKind		kind;
 

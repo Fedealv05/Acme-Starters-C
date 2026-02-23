@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
+import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,14 +16,10 @@ import lombok.Setter;
 @Setter
 public class Sponsor extends AbstractRole {
 
-	// Serialisation version --------------------------------------------------
-
 	private static final long	serialVersionUID	= 1L;
 
-	// Attributes -------------------------------------------------------------
-
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				address;
 
@@ -35,9 +32,5 @@ public class Sponsor extends AbstractRole {
 	@Valid
 	@Column
 	private Boolean				gold;
-
-	// Derived attributes -----------------------------------------------------
-
-	// Relationships ----------------------------------------------------------
 
 }
