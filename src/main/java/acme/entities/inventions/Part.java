@@ -10,6 +10,7 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoney;
+import acme.constraints.ValidHeader;
 import acme.datatypes.PartKind;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +23,7 @@ public class Part extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	//@ValidHeader
+	@ValidHeader
 	@Column
 	private String				name;
 
