@@ -1,0 +1,4 @@
+key,key:userAccount,bio,keyWords,licensed
+"inventor-01","user-account-inventor01","Nacido en 2001, comenzó a inventar con 6 años y el resto es hisstoria. Es el mejor inventor de la plataforma","electrónico,invención,creatividad",True
+"inventor-02","user-account-inventor02","Nacida en 1995, transformó su garaje en un laboratorio de robótica sostenible. Cree que el futuro es verde o no será.","robótica,ecología,sostenibilidad",True
+"inventor-03","user-account-inventor03","Ex-arquitecto que decidió aplicar el diseño industrial a la inteligencia artificial de consumo. Autodidacta y visionario.","IA,diseño industrial,hardware",False
