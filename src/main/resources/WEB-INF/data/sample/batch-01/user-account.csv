@@ -8,3 +8,6 @@ user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטי�
 user-account-sponsor-01,true,"UserIdentity{name: 'Francisco', surname: 'Portelo', email: 'portelo@acme.com'}",sponsor1,sponsor1
 user-account-sponsor-02,true,"UserIdentity{name: 'Hemenegildo', surname: 'Orenses', email: 'orenses@acme.com'}",sponsor2,sponsor2
 user-account-sponsor-03,true,"UserIdentity{name: 'Antonio Mario', surname: 'Herrero', email: 'herrero@acme.com'}",sponsor3,sponsor3
+user-account-inventor01,true,"UserIdentity{name: 'Josevi', surname: 'sanchez', email: 'josevi@acme.com'}",inventor1,inventor1
+user-account-inventor02,true,"UserIdentity{name: 'Marta', surname: 'אבטיח Æløzå', email: 'Marta@acme.com'}",inventor2,inventor2
+user-account-inventor03,true,"UserIdentity{name: 'Myke', surname: 'mårcelo', email: 'myke@acme.com'}",inventor3,inventor3
