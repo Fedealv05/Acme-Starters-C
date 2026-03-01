@@ -14,6 +14,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -22,6 +23,7 @@ import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.constraints.sponsorships.ValidSponsorship;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,6 +31,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidSponsorship
 public class Sponsorship extends AbstractEntity {
 
 	@Autowired
@@ -82,7 +85,7 @@ public class Sponsorship extends AbstractEntity {
 
 	@Transient
 	@Valid
-	public Double getMonthsActive() {
+	public Double monthsActive() {
 		double result = 0.0;
 		if (this.startMoment != null && this.endMoment != null) {
 			long diff = this.endMoment.getTime() - this.startMoment.getTime();
@@ -93,10 +96,13 @@ public class Sponsorship extends AbstractEntity {
 	}
 
 	@Transient
-	//@ValidMoney(positive = true)
-	public Double calculateTotalMoney(final Sponsorship s) {
-		Double total = this.donationRepository.totalMoneyBySponsorshipId(s.getId());
-		return total != null ? total : 0.0;
+	//@ValidMoney(min = 0)
+	public Money totalMoney() {
+		Double sum = this.donationRepository.totalMoneyBySponsorshipId(this.getId());
+		Money res = new Money();
+		res.setAmount(sum != null ? sum : 0.0);
+		res.setCurrency("EUR");
+		return res;
 	}
 
 }

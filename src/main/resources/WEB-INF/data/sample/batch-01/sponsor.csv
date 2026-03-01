@@ -1,4 +1,4 @@
 key,key:userAccount,address,im,gold
 sponsor-01,user-account-sponsor-01,"Avenida de la Constitución 15, Sevilla",http://linkedin.com/in/sponsor1,true
 sponsor-02,user-account-sponsor-02,"Calle Sierpes 22, Local 3",sponsor_oficial@acme.com,false
-sponsor-03,user-account-sponsor-03,"Calle Ulía 9","http://foto.com"",false
+sponsor-03,user-account-sponsor-03,"Calle Ulía 9","http://foto.com",false
