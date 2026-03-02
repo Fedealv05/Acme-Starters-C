@@ -9,11 +9,15 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.sponsorships.DonationRepository;
 import acme.entities.sponsorships.Sponsorship;
+import acme.entities.sponsorships.SponsorshipRepository;
 
 public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sponsorship> {
 
 	@Autowired
-	private DonationRepository donationRepository;
+	private DonationRepository		donationRepository;
+
+	@Autowired
+	private SponsorshipRepository	sponsorshipRepository;
 
 
 	@Override
@@ -23,39 +27,54 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 
 	@Override
 	public boolean isValid(final Sponsorship sponsorship, final ConstraintValidatorContext context) {
+
 		assert context != null;
+
 		boolean result;
 
 		if (sponsorship == null)
 			result = true;
 		else {
 
-			if (!sponsorship.getDraftMode()) {
+			// 0. Ticker único
+			{
+				boolean uniqueTicker;
+				Sponsorship existing;
 
-				// 1. Al menos una donación usando el COUNT
-				{
-					Long count = 0L;
-					if (sponsorship.getId() > 0)
-						count = this.donationRepository.countBySponsorshipId(sponsorship.getId());
+				existing = this.sponsorshipRepository.findSponsorshipByTicker(sponsorship.getTicker());
+				uniqueTicker = existing == null || existing.equals(sponsorship);
 
-					boolean hasDonations = count > 0;
-					super.state(context, hasDonations, "draftMode", "acme.validation.sponsorship.at-least-one-donation.message");
-				}
-
-				// 2. Intervalo de tiempo válido en el futuro respecto al momento de publicación
-				{
-					boolean validInterval = false;
-					if (sponsorship.getStartMoment() != null && sponsorship.getEndMoment() != null) {
-						boolean startInFuture = MomentHelper.isAfter(sponsorship.getStartMoment(), MomentHelper.getCurrentMoment());
-						boolean endAfterStart = MomentHelper.isAfter(sponsorship.getEndMoment(), sponsorship.getStartMoment());
-
-						validInterval = startInFuture && endAfterStart;
-					}
-					super.state(context, validInterval, "startMoment", "acme.validation.sponsorship.invalid-interval.message");
-				}
+				super.state(context, uniqueTicker, "ticker", "acme.validation.sponsorship.duplicated-ticker.message");
 			}
 
-			result = !super.hasErrors(context);
+			// 1. Al menos una donación (si no está en draft)
+			{
+				boolean hasDonations;
+
+				if (sponsorship.getDraftMode())
+					hasDonations = true;
+				else {
+					long count = this.donationRepository.countBySponsorshipId(sponsorship.getId());
+					hasDonations = count > 0;
+				}
+
+				super.state(context, hasDonations, "draftMode", "acme.validation.sponsorship.at-least-one-donation.message");
+			}
+
+			// 2. Intervalo de tiempo válido (start < end y en el futuro)
+			{
+				boolean validInterval = false;
+
+				if (sponsorship.getStartMoment() != null && sponsorship.getEndMoment() != null) {
+					boolean startInFuture = MomentHelper.isAfter(sponsorship.getStartMoment(), MomentHelper.getCurrentMoment());
+					boolean endAfterStart = MomentHelper.isAfter(sponsorship.getEndMoment(), sponsorship.getStartMoment());
+					validInterval = startInFuture && endAfterStart;
+				}
+
+				super.state(context, validInterval, "startMoment", "acme.validation.sponsorship.invalid-interval.message");
+			}
+
+			return !super.hasErrors(context);
 		}
 
 		return result;

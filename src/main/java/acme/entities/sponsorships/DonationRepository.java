@@ -13,4 +13,6 @@ public interface DonationRepository extends AbstractRepository {
 	@Query("SELECT COUNT(d) FROM Donation d WHERE d.sponsorship.id = :sponsorshipId")
 	Long countBySponsorshipId(int sponsorshipId);
 
+	Donation findByTicker(String ticker);
+
 }
