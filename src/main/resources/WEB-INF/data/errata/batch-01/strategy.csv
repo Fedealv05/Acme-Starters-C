@@ -1,0 +1,20 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:fundraiser
+err-strat-001,"","Valid Name","Valid Description","2028/01/01 00:00","2029/01/01 00:00","http://valid.com",true,err-fundraiser-01
+err-strat-002,ABCD,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-003,AAAAAAAAAAAAAAAA,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-004,AB CD,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-005,AB$CD,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-006,AB.CD,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-007,VALID-007,"",Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-008,VALID-008,,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-009,VALID-009,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-010,VALID-010,Valid Name,"",2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-011,VALID-011,Valid Name,,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-012,VALID-012,Valid Name,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-013,VALID-013,Valid Name,Valid Description,2029/01/01 00:00,2028/01/01 00:00,http://valid.com,true,err-fundraiser-01
+err-strat-014,VALID-014,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,ftp://example.com,true,err-fundraiser-01
+err-strat-015,VALID-015,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://localhost,true,err-fundraiser-01
+err-strat-016,VALID-016,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,invalid-url-string,true,err-fundraiser-01
+err-strat-017,VALID-017,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://example.com/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,true,err-fundraiser-01
+err-strat-018,VALID-018,Valid Name,Falla porque no tiene tacticas y se intenta publicar,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,false,err-fundraiser-01
+err-strat-019,VALID-019,Valid Name,Falla porque se publica con fecha pasada,2020/01/01 00:00,2029/01/01 00:00,http://valid.com,false,err-fundraiser-01
