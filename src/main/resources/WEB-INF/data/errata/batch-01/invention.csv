@@ -1,0 +1,20 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:inventor
+"err-inv-001","","Valid Name","Valid Description","2028/01/01 00:00","2029/01/01 00:00","http://valid.com",true,"inventor-01"
+err-inv-002,ABCD,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-003,AAAAAAAAAAAAAAAA,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-004,AB CD,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-005,AB$CD,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-006,AB.CD,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-007,VALID-007,"",Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-008,VALID-008,,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-009,VALID-009,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-010,VALID-010,Valid Name,"",2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-011,VALID-011,Valid Name,,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-012,VALID-012,Valid Name,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,2028/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-014,VALID-014,Valid Name,Valid Description,2020/01/01 00:00,2029/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-016,VALID-016,Valid Name,Valid Description,2028/01/01 00:00,2020/01/01 00:00,http://valid.com,true,inventor-01
+err-inv-017,VALID-017,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,ftp://example.com,true,inventor-01
+err-inv-018,VALID-018,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://example.com:8080,true,inventor-01
+err-inv-019,VALID-019,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://localhost,true,inventor-01
+err-inv-020,VALID-020,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,invalid-url-string,true,inventor-01
+err-inv-021,VALID-021,Valid Name,Valid Description,2028/01/01 00:00,2029/01/01 00:00,http://example.com/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,true,inventor-01
