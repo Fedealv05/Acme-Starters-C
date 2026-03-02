@@ -1,0 +1,6 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:sponsor
+"sponsorship-001","AAA-001","Borrador sin donaciones","Borrador recién creado, válido porque draftMode es true.","2026/01/15 10:00","2026/06/15 10:00","","true","sponsor-001"
+"sponsorship-002","BBB-002","Borrador con donaciones","Borrador que ya tiene donaciones preparadas pero aún no se publica.","2026/02/01 12:00","2026/12/31 23:59","http://moreinfo.com/bbb","true","sponsor-002"
+"sponsorship-003","CCC-003","Publicado mínimo","Publicado con la donación mínima requerida (1 donación).","2026/03/10 09:00","2027/03/10 09:00","","false","sponsor-001"
+"sponsorship-004","DDD-004","Publicado éxito","Publicado con múltiples donaciones y URL proporcionada.","2026/05/20 16:30","2028/05/20 16:30","http://exito.com","false","sponsor-002"
+"sponsorship-005","EEE-005","Publicado extremo","Fechas muy lejanas en el futuro, pero válidas.","2030/01/01 00:00","2050/01/01 00:00","","false","sponsor-001"

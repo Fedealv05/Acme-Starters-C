@@ -6,11 +6,13 @@ import javax.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
+import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.sponsorships.DonationRepository;
 import acme.entities.sponsorships.Sponsorship;
 import acme.entities.sponsorships.SponsorshipRepository;
 
+@Validator
 public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sponsorship> {
 
 	@Autowired

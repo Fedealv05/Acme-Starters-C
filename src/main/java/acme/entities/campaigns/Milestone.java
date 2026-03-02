@@ -12,8 +12,12 @@ import acme.client.components.validation.ValidNumber;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.datatypes.MilestoneKind;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Milestone extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
