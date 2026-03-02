@@ -1,0 +1,3 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,fundraiser
+strategy-pos-min,MIN-001,A,D,2026-06-01 10:00,2026-06-01 10:05,http://acme.org,true,fundraiser-01
+strategy-pos-max,MAX-999,"Nombre de exactamente cien caracteres para validar el límite máximo permitido por la validación del sys","Esta descripción tiene exactamente doscientos cincuenta y cinco caracteres para validar que el sistema acepta el máximo permitido en la base de datos sin truncar nada, asegurando que toda la información relevante de la estrategia se guarda de forma íntegra.",2026-12-01 09:00,2027-12-01 09:00,http://acme.org/info,false,fundraiser-02

@@ -1,0 +1,4 @@
+key,bank,statement,agent,userAccount
+fundraiser-01,International Global Bank,Especialista en recaudación para ONGs de desarrollo sostenible.,true,user-account-fundraiser-01
+fundraiser-02,Caja de Ahorros Nacional,Comprometido con la transparencia y el impacto social inmediato.,false,user-account-fundraiser-02
+fundraiser-03,Digital Finance Corp,Nuevo recaudador en la plataforma buscando proyectos innovadores.,false,user-account-fundraiser-03

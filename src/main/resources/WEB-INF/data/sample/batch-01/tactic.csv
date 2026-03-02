@@ -1,0 +1,5 @@
+key,name,notes,expectedPercentage,kind,strategy
+tactic-pos-perc-min,Táctica Mínima,Nota corta.,0.0,MARKETING,strategy-pos-min
+tactic-pos-perc-max,Táctica Máxima,Nota corta.,100.0,EVENTS,strategy-pos-max
+tactic-pos-text-min,T,N,50.0,ADVERTISING,strategy-pos-min
+tactic-pos-text-max,"Nombre de exactamente cien caracteres para validar el límite máximo permitido por la validación del sys","Esta nota tiene exactamente doscientos cincuenta y cinco caracteres para validar que el sistema acepta el máximo permitido en la base de datos sin truncar nada, asegurando que toda la información relevante de la táctica se guarda de forma íntegra.",50.0,TECHNICAL,strategy-pos-max
