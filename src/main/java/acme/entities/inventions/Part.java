@@ -36,7 +36,7 @@ public class Part extends AbstractEntity {
 	@Mandatory
 	@ValidMoney(min = 0)
 	@Column
-	private Money				cost;
+	private Money				cost; //VALIDAR QUE SOLO SE INTRODUCEN EUROS
 
 	@Mandatory
 	@Valid
