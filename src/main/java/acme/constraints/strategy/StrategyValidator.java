@@ -60,15 +60,16 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 					super.state(context, validTactics, "draftMode", "acme.validation.strategy.tactics.message");
 				}
 
-				{
-					boolean validFutureStart = true;
-					if (strategy.getStartMoment() != null) {
-						Date now = new Date(System.currentTimeMillis() - 60000);
-						validFutureStart = strategy.getStartMoment().after(now);
-					}
-
-					super.state(context, validFutureStart, "startMoment", "acme.validation.strategy.startMoment.future.message");
-				}
+//				{
+//					boolean validFutureStart = true;
+//					if (strategy.getStartMoment() != null) {
+//						Date now = new Date(System.currentTimeMillis() - 60000);
+//						validFutureStart = strategy.getStartMoment().after(now);
+//					}
+//
+//					super.state(context, validFutureStart, "startMoment", "acme.validation.strategy.startMoment.future.message");
+//				}
+				//esto va en el Servicio
 			}
 
 			result = !super.hasErrors(context);
