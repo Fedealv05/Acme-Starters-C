@@ -1,0 +1,7 @@
+key,name,notes,money,kind,key:sponsorship
+"donation-001","Donación prematura","Donación a un borrador (sponsorship-002).","EUR 10.00","ALTRUIST","sponsorship-002"
+"donation-002","Aporte único","La donación que permite publicar el sponsorship-003.","EUR 500.00","REWARDED","sponsorship-003"
+"donation-003","Aporte inicial","Primera donación para el sponsorship-004.","EUR 150.00","CELEBRATED","sponsorship-004"
+"donation-004","Aporte secundario","Segunda donación para el sponsorship-004.","EUR 75.50","ALTRUIST","sponsorship-004"
+"donation-005","Aporte final","Tercera donación para el sponsorship-004.","EUR 1000.00","REWARDED","sponsorship-004"
+"donation-006","Inversión futuro","Donación para el patrocinio de 2030.","EUR 9999.99","CELEBRATED","sponsorship-005"

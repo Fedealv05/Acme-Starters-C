@@ -1,0 +1,11 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:sponsor
+"err-sp-001","FFF-001","Falla Ticker Duplicado","Usa un ticker que ya existe en el Sample Data.","2026/06/01 10:00","2026/12/01 10:00","","true","sponsor-001"
+"err-sp-002","","Falla Ticker Vacío","El ticker es obligatorio.","2026/06/01 10:00","2026/12/01 10:00","","true","sponsor-001"
+"err-sp-003","GGG-003","   ","Falla por nombre en blanco (ValidHeader).","2026/06/01 10:00","2026/12/01 10:00","","true","sponsor-001"
+"err-sp-004","HHH-004","Falla desc","","2026/06/01 10:00","2026/12/01 10:00","","true","sponsor-001"
+"err-sp-005","III-005","Falla URL","La URL no tiene formato web.","2026/06/01 10:00","2026/12/01 10:00","esto-no-es-una-url","true","sponsor-001"
+"err-sp-006","JJJ-006","Falla Inicio","Inicio anterior al reloj.","2024/12/31 23:59","2026/12/01 10:00","","true","sponsor-001"
+"err-sp-007","KKK-007","Falla Fin","El endMoment está en el pasado.","2026/06/01 10:00","2024/12/01 10:00","","true","sponsor-001"
+"err-sp-008","LLL-008","Falla Rango","El inicio es posterior al fin.","2026/12/01 10:00","2026/06/01 10:00","","true","sponsor-001"
+"err-sp-009","MMM-009","Falla Publicar","Intenta publicar sin donaciones.","2026/06/01 10:00","2026/12/01 10:00","","false","sponsor-001"
+"err-sp-010","NNN-010","Falla Sponsor","No tiene clave asignada.","2026/06/01 10:00","2026/12/01 10:00","","true",""

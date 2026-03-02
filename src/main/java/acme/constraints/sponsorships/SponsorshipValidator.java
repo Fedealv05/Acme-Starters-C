@@ -6,10 +6,12 @@ import javax.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
+import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.sponsorships.DonationRepository;
 import acme.entities.sponsorships.Sponsorship;
 
+@Validator
 public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sponsorship> {
 
 	@Autowired
@@ -29,20 +31,25 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 		if (sponsorship == null)
 			result = true;
 		else {
-
 			if (!sponsorship.getDraftMode()) {
 
-				// 1. Al menos una donación usando el COUNT
+				// 1. Al menos una donación (Adaptado para 1 solo batch)
 				{
-					Long count = 0L;
-					if (sponsorship.getId() > 0)
-						count = this.donationRepository.countBySponsorshipId(sponsorship.getId());
+					boolean hasDonations;
 
-					boolean hasDonations = count > 0;
+					if (sponsorship.getId() > 0) {
+						// Si ya está en base de datos (Ej: el usuario lo está editando para publicarlo)
+						Long count = this.donationRepository.countBySponsorshipId(sponsorship.getId());
+						hasDonations = count > 0;
+					} else
+						// TRUCO POPULATOR: Si id == 0 es una inserción nueva. 
+						// El populator lo necesita para poder guardar el Sponsorship antes que las donaciones.
+						hasDonations = true;
+
 					super.state(context, hasDonations, "draftMode", "acme.validation.sponsorship.at-least-one-donation.message");
 				}
 
-				// 2. Intervalo de tiempo válido en el futuro respecto al momento de publicación
+				// 2. Intervalo de tiempo válido en el futuro
 				{
 					boolean validInterval = false;
 					if (sponsorship.getStartMoment() != null && sponsorship.getEndMoment() != null) {
