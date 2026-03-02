@@ -1,0 +1,11 @@
+key,name,notes,expectedPercentage,kind,key:strategy
+err-tactic-001,"","Valid Tactic Notes",10.0,SUBTLE,err-strat-001
+err-tactic-002,,Valid Tactic Notes,10.0,SUBTLE,err-strat-001
+err-tactic-003,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Valid Tactic Notes,10.0,SUBTLE,err-strat-001
+err-tactic-004,Valid Tactic Name,"",10.0,SUBTLE,err-strat-001
+err-tactic-005,Valid Tactic Name,,10.0,SUBTLE,err-strat-001
+err-tactic-006,Valid Tactic Name,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,10.0,SUBTLE,err-strat-001
+err-tactic-007,Valid Tactic Name,Valid Tactic Notes,"",SUBTLE,err-strat-001
+err-tactic-008,Valid Tactic Name,Valid Tactic Notes,-0.01,SUBTLE,err-strat-001
+err-tactic-009,Valid Tactic Name,Valid Tactic Notes,1000.01,SUBTLE,err-strat-001
+err-tactic-012,Valid Tactic Name,Valid Tactic Notes,10.0,SUBTLE,""
