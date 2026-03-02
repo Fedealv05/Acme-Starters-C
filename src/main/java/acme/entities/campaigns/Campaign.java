@@ -5,6 +5,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -21,6 +22,7 @@ import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.realms.SpokesPerson;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -65,6 +67,16 @@ public class Campaign extends AbstractEntity {
 	@Column
 	private String				moreInfo;
 
+	@Mandatory
+	@Valid
+	@Column
+	private Boolean				draftMode;
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private SpokesPerson		spokesPerson;
+
 
 	@Transient
 	@Valid
@@ -83,11 +95,5 @@ public class Campaign extends AbstractEntity {
 	public Double effort() {
 		return this.repository.findTotalEffortByCampaignId(this.getId());
 	}
-
-
-	@Mandatory
-	@Valid
-	@Column
-	private Boolean draftmode;
 
 }

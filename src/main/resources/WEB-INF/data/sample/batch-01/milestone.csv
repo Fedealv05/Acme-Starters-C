@@ -1,0 +1,15 @@
+key,key:campaign,title,achievements,effort,kind
+milestone-01,campaign-01,Definición de Estrategia,Documento base con los objetivos financieros y el plan de medios aprobado.,12.5,TEASER
+milestone-02,campaign-02,Prototipo de Ética IA,Desarrollo del primer algoritmo de detección de sesgos algorítmicos.,45.0,ENGAGING
+milestone-03,campaign-01,Lanzamiento en Madrid,Evento presencial con los principales analistas del sector bancario.,20.0,CONVERSION
+milestone-04,campaign-01,D,Documento base con los objetivos financieros y el plan de medios aprobado.,12.5,CONVERSION
+milestone-05,campaign-01,De,Documento base con los objetivos financieros y el plan de medios aprobado.,12.5,CONVERSION
+milestone-06,campaign-01,Este es un texto de prueba que tiene exactamente setenta y cinco caracteres,Documento base con los objetivos financieros y el plan de medios aprobado.,12.5,CONVERSION
+milestone-07,campaign-01,Este es un texto de prueba que tiene exactamente setenta y cinco caractere,Documento base con los objetivos financieros y el plan de medios aprobado.,12.5,CONVERSION
+milestone-08,campaign-02,Prototipo de Ética IA,D,45.0,CONVERSION
+milestone-09,campaign-02,Prototipo de Ética IA,De,45.0,CONVERSION
+milestone-10,campaign-02,Prototipo de Ética IA,Este es un texto de prueba diseñado para alcanzar exactamente los doscientos cincuenta y cinco caracteres de longitud total sin utilizar ningun tipo de tildes o caracteres especiales que puedan dar problemas en la validacion de campos de texto de Java.Ok.,45.0,CONVERSION
+milestone-11,campaign-02,Prototipo de Ética IA,Este es un texto de prueba diseñado para alcanzar exactamente los doscientos cincuenta y cinco caracteres de longitud total sin utilizar ningun tipo de tildes o caracteres especiales que puedan dar problemas en la validacion de campos de texto de Java.Ok,45.0,CONVERSION
+milestone-12,campaign-01,Lanzamiento en Madrid,Evento presencial con los principales analistas del sector bancario.,0.0,CONVERSION
+milestone-13,campaign-01,Lanzamiento en Madrid,Evento presencial con los principales analistas del sector bancario.,0.1,CONVERSION
+milestone-14,campaign-01,Definición de Estrategia,Documento base con los objetivos financieros y el plan de medios aprobado.,12.5,CONVERSION
