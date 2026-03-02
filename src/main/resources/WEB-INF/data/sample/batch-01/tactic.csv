@@ -1,5 +1,12 @@
-key,name,notes,expectedPercentage,kind,strategy
-tactic-pos-perc-min,Táctica Mínima,Nota corta.,0.0,MARKETING,strategy-pos-min
-tactic-pos-perc-max,Táctica Máxima,Nota corta.,100.0,EVENTS,strategy-pos-max
-tactic-pos-text-min,T,N,50.0,ADVERTISING,strategy-pos-min
-tactic-pos-text-max,"Nombre de exactamente cien caracteres para validar el límite máximo permitido por la validación del sys","Esta nota tiene exactamente doscientos cincuenta y cinco caracteres para validar que el sistema acepta el máximo permitido en la base de datos sin truncar nada, asegurando que toda la información relevante de la táctica se guarda de forma íntegra.",50.0,TECHNICAL,strategy-pos-max
+key,name,notes,expectedPercentage,kind,key:strategy
+"tactic-001","Anuncios en Redes Sociales","Segmentación de anuncios en plataformas meta para usuarios de 18-35 años.",25.5,"AGGRESSIVE","strategy-022"
+"tactic-002","Charlas en Colegios","Educación ambiental en institutos para fomentar pequeñas donaciones familiares.",15.0,"TENDER","strategy-022"
+"tactic-003","Patrocinio Tecnológico","Contactar con empresas de hardware para donaciones de equipos en desuso.",80.0,"AGGRESSIVE","strategy-023"
+"tactic-004","Crowdfunding Comunitario","Lanzamiento de campaña de microdonaciones en plataformas locales.",20.0,"SUBTLE","strategy-023"
+"tactic-005","Base Tactic Name","This is a standard base note for testing tactics.",10.0,"SUBTLE","strategy-001"
+"tactic-006","N","This is a standard base note for testing tactics.",5.5,"AGGRESSIVE","strategy-002"
+"tactic-007","Na","This is a standard base note for testing tactics.",99.9,"TENDER","strategy-003"
+"tactic-008","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod te","This is a standard base note for testing tactics.",50.0,"SUBTLE","strategy-001"
+"tactic-009","Base Tactic Name","D",0.1,"AGGRESSIVE","strategy-003"
+"tactic-010","Base Tactic Name","De",100.0,"TENDER","strategy-001"
+"tactic-011","Base Tactic Name","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",33.3,"SUBTLE","strategy-002"
