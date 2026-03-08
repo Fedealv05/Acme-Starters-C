@@ -29,15 +29,15 @@
 	<parent>
 		<groupId>Acme</groupId>
 		<artifactId>pom</artifactId>
-		<version>26.2.0</version>
-		<relativePath>../../pom-26.2.0.xml</relativePath>
+		<version>26.3.0</version>
+		<relativePath>../../pom-26.3.0.xml</relativePath>
 	</parent>
 	
 	<dependencies>
 		<dependency>
 			<groupId>Acme</groupId>
 			<artifactId>Acme-Framework</artifactId>
-			<version>26.2.0</version>
+			<version>26.3.0</version>
 		</dependency>
 	</dependencies>
 </project>

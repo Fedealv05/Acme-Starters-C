@@ -1,14 +1,14 @@
 key,name,description,cost,kind,key:invention
-"part-001","Base Part Name","This is a standard base description for testing parts.","EUR 50.00","CORE","invention-001"
-"part-002","N","This is a standard base description for testing parts.","EUR 50.00","MANDATORY","invention-002"
-"part-003","Na","This is a standard base description for testing parts.","EUR 50.00","OPTIONAL","invention-003"
-"part-004","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod te","This is a standard base description for testing parts.","EUR 50.00","CORE","invention-001"
-"part-005","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tem","This is a standard base description for testing parts.","EUR 50.00","CORE","invention-002"
-"part-006","Base Part Name","D","EUR 50.00","CORE","invention-003"
-"part-007","Base Part Name","De","EUR 50.00","CORE","invention-001"
-"part-008","Base Part Name","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor","EUR 50.00","CORE","invention-002"
-"part-009","Base Part Name","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.","EUR 50.00","MANDATORY","invention-003"
-"part-010","Base Part Name","This is a standard base description for testing parts.","EUR 0.00","OPTIONAL","invention-001"
-"part-011","Base Part Name","This is a standard base description for testing parts.","EUR 0.01","OPTIONAL","invention-002"
-"part-012","Base Part Name","This is a standard base description for testing parts.","EUR 999999.99","MANDATORY","invention-003"
-"part-013","Base Part Name","This is a standard base description for testing parts.","EUR 50.00","CORE","invention-001"
+part-001,Base Part Name,This is a standard base description for testing parts.,EUR 50.00,CORE,invention-001
+part-002,N,This is a standard base description for testing parts.,EUR 50.00,MANDATORY,invention-002
+part-003,Na,This is a standard base description for testing parts.,EUR 50.00,OPTIONAL,invention-003
+part-004,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod te",This is a standard base description for testing parts.,EUR 50.00,CORE,invention-004
+part-005,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tem",This is a standard base description for testing parts.,EUR 50.00,CORE,invention-005
+part-006,Base Part Name,D,EUR 50.00,CORE,invention-003
+part-007,Base Part Name,De,EUR 50.00,CORE,invention-001
+part-008,Base Part Name,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",EUR 50.00,CORE,invention-002
+part-009,Base Part Name,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.",EUR 50.00,MANDATORY,invention-003
+part-010,Base Part Name,This is a standard base description for testing parts.,EUR 0.00,OPTIONAL,invention-001
+part-011,Base Part Name,This is a standard base description for testing parts.,EUR 0.01,OPTIONAL,invention-002
+part-012,Base Part Name,This is a standard base description for testing parts.,EUR 999999.99,MANDATORY,invention-003
+part-013,Base Part Name,This is a standard base description for testing parts.,EUR 50.00,CORE,invention-001
