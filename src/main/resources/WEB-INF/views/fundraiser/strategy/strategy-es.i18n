@@ -1,24 +1,24 @@
 #Strategy Form #######################################################
 
-authenticated.strategy.form.label.ticker = Código
-authenticated.strategy.form.label.name = Nombre
-authenticated.strategy.form.label.description = Descripción
-authenticated.strategy.form.label.startMoment = Momento de inicio
-authenticated.strategy.form.label.endMoment = Momento de fin
-authenticated.strategy.form.label.moreInfo = Más Información
-authenticated.strategy.form.label.monthsActive = Meses activos
-authenticated.strategy.form.label.expectedPercentage = Porcentaje esperado
+fundraiser.strategy.form.label.ticker = Código
+fundraiser.strategy.form.label.name = Nombre
+fundraiser.strategy.form.label.description = Descripción
+fundraiser.strategy.form.label.startMoment = Momento de inicio
+fundraiser.strategy.form.label.endMoment = Momento de fin
+fundraiser.strategy.form.label.moreInfo = Más Información
+fundraiser.strategy.form.label.monthsActive = Meses activos
+fundraiser.strategy.form.label.expectedPercentage = Porcentaje esperado
 
-authenticated.strategy.form.label.tactics = Ver tácticas
+fundraiser.strategy.form.label.tactics = Ver tácticas
 
-authenticated.strategy.form.title = Estrategia
+fundraiser.strategy.form.title = Estrategia
 
 #Strategy List #######################################################
 
-authenticated.strategy.list.label.ticker = Código
-authenticated.strategy.list.label.name = Nombre
-authenticated.strategy.list.label.startMoment = Momento de inicio
-authenticated.strategy.list.label.endMoment = Momento de fin
+fundraiser.strategy.list.label.ticker = Código
+fundraiser.strategy.list.label.name = Nombre
+fundraiser.strategy.list.label.startMoment = Momento de inicio
+fundraiser.strategy.list.label.endMoment = Momento de fin
 
 fundraiser.strategy.list.title = Mis Estrategias
 fundraiser.strategy.form.title = Detalles de la Estrategia
