@@ -1,0 +1,24 @@
+#Strategy Form #######################################################
+
+any.strategy.form.label.ticker = Ticker
+any.strategy.form.label.name = Name
+any.strategy.form.label.description = Description
+any.strategy.form.label.startMoment = Start Moment
+any.strategy.form.label.endMoment = End Moment
+any.strategy.form.label.moreInfo = More Info
+any.strategy.form.label.monthsActive = Months Active
+any.strategy.form.label.expectedPercentage = Expected Percentage
+
+any.strategy.form.label.tactics = View tactics
+any.strategy.form.label.fundraiser = View fundraiser
+
+any.strategy.form.title = Strategy
+
+#Strategy List #######################################################
+
+any.strategy.list.label.ticker = Ticker
+any.strategy.list.label.name = Name
+any.strategy.list.label.startMoment = Start Moment
+any.strategy.list.label.endMoment = End Moment
+
+any.strategy.list.title = Strategies

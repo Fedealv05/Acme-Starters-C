@@ -41,6 +41,9 @@
 		<acme:menu-option code="master.menu.invention" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.invention.list" action="/any/invention/list"/>
 		</acme:menu-option>
+		<acme:menu-option code="master.menu.strategy" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.strategy.list" action="/any/strategy/list"/>
+		</acme:menu-option>
 	</acme:menu-left>
 
 	<acme:menu-right>		

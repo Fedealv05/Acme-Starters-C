@@ -15,6 +15,6 @@ public interface AnyStrategyRepository extends AbstractRepository {
 
 	List<Strategy> findByDraftModeFalse();
 
-	@Query("select s from Strategy s where s.id = :id")
+	@Query("select s from Strategy s left join fetch s.tactics where s.id = :id")
 	Strategy findStrategyById(@Param("id") int id);
 }
