@@ -1,0 +1,24 @@
+#Strategy Form #######################################################
+
+authenticated.strategy.form.label.ticker = Ticker
+authenticated.strategy.form.label.name = Name
+authenticated.strategy.form.label.description = Description
+authenticated.strategy.form.label.startMoment = Start Moment
+authenticated.strategy.form.label.endMoment = End Moment
+authenticated.strategy.form.label.moreInfo = More Info
+authenticated.strategy.form.label.monthsActive = Months Active
+authenticated.strategy.form.label.expectedPercentage = Expected Percentage
+
+authenticated.strategy.form.label.tactics = View tactics
+
+authenticated.strategy.form.title = Strategy
+
+#Strategy List #######################################################
+
+authenticated.strategy.list.label.ticker = Ticker
+authenticated.strategy.list.label.name = Name
+authenticated.strategy.list.label.startMoment = Start Moment
+authenticated.strategy.list.label.endMoment = End Moment
+
+fundraiser.strategy.list.title = My Strategies
+fundraiser.strategy.form.title = Strategy Details
