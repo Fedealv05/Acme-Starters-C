@@ -15,7 +15,7 @@ public class AnySponsorController extends AbstractController<Any, Sponsor> {
 
 	@PostConstruct
 	protected void initialise() {
-		super.setMediaType(MediaType.HTML);
+		super.setMediaType(MediaType.TEXT_HTML);
 		super.addBasicCommand("show", AnySponsorShowService.class);
 	}
 
