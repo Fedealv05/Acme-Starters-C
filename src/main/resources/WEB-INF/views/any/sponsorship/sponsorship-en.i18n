@@ -6,11 +6,13 @@ any.sponsorship.form.label.description = Description
 any.sponsorship.form.label.moreInfo = More Information
 any.sponsorship.form.label.startMoment = Start Moment
 any.sponsorship.form.label.endMoment = End Moment
+any.sponsorship.list.label.draftMode = Published
 
 any.sponsorship.form.label.donations = View donations
 any.sponsorship.form.label.sponsor = View sponsor
 
 any.sponsorship.form.title = Sponsorship
+sponsor.sponsorship.form.title = Sponsorship
 
 #Sponsorship List #######################################################
 
@@ -20,3 +22,4 @@ any.sponsorship.list.label.startMoment = Start Moment
 any.sponsorship.list.label.endMoment = End Moment
 
 any.sponsorship.list.title = Sponsorships
+sponsor.sponsorship.list.title = Sponsorships
