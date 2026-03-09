@@ -11,5 +11,8 @@
 <acme:form-moment code="any.invention.form.label.startMoment" path="startMoment"/>
 <acme:form-moment code="any.invention.form.label.endMoment" path="endMoment"/>
 
+<acme:button code="any.invention.form.label.parts" action="/any/part/list?inventionId=${id}"  />
+
+<acme:button code="any.invention.form.label.inventor" action="/any/inventor/show?id=${inventorId}"  />
 
 </acme:form>
