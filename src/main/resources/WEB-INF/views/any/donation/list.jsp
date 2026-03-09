@@ -6,6 +6,6 @@
 <acme:list>
 <acme:list-column code="any.donation.list.label.name" path="name" />
 <acme:list-column code="any.donation.list.label.notes" path="notes" />
-<acme:list-column code="any.donation.list.label.kind" path="money" />
+<acme:list-column code="any.donation.list.label.money" path="money" />
 
 </acme:list>
