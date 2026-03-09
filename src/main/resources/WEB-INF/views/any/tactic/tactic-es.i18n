@@ -1,0 +1,16 @@
+#Tactic Form #######################################################
+
+any.tactic.form.label.name = Nombre
+any.tactic.form.label.kind = Tipo
+any.tactic.form.label.notes = Notas
+any.tactic.form.label.expectedPercentage = Porcentaje esperado
+
+any.tactic.form.title = Táctica
+
+#Tactic List #######################################################
+
+any.tactic.list.label.name = Nombre
+any.tactic.list.label.kind = Tipo
+any.tactic.list.label.expectedPercentage = Porcentaje esperado
+
+any.tactic.list.title = Tácticas
