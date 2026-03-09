@@ -49,3 +49,5 @@ master.menu.user-account.consumer-profile = Perfil de consumidor
 
 master.menu.sponsorship = Patrocinio
 master.menu.sponsorship.list = Lista de patrocinadores
+master.menu.authsponsorship = Patrocinio
+master.menu.authsponsorship.list = Mis patrocinios

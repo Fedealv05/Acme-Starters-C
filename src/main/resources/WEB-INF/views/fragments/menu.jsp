@@ -44,6 +44,9 @@
 		<acme:menu-option code="master.menu.sponsorship" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.sponsorship.list" action="/any/sponsorship/list"/>
 		</acme:menu-option>
+		<acme:menu-option code="master.menu.authsponsorship" access="hasRealm('Sponsor')">
+			<acme:menu-suboption code="master.menu.authsponsorship.list" action="/sponsor/sponsorship/list"/>
+		</acme:menu-option>
 	</acme:menu-left>
 
 	<acme:menu-right>		

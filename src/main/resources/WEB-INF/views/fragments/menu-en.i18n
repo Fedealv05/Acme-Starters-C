@@ -49,4 +49,6 @@ master.menu.user-account.consumer-profile = Consumer profile
 
 master.menu.sponsorship = Sponsorship
 master.menu.sponsorship.list = List sponsorships
+master.menu.authsponsorship = Sponsorship
+master.menu.authsponsorship.list = My sponsorships
 

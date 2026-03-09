@@ -28,7 +28,7 @@ public class AnyDonationListService extends AbstractService<Any, Donation> {
 	}
 
 	@Override
-	public void authorise() { //PREGUNTAR
+	public void authorise() {
 		boolean status = true;
 		super.setAuthorised(status);
 	}
