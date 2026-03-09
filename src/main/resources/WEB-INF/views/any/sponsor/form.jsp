@@ -5,8 +5,8 @@
 
 <acme:form>
 <acme:form-textbox code="any.sponsor.form.label.address" path="address"/>
-<acme:form-textbox code="any.invention.form.label.name" path="name"/>
-<acme:form-textarea code="any.invention.form.label.description" path="description"/>
+<acme:form-url code="any.sponsor.form.label.im" path="im"/>
+<acme:form-checkbox code="any.sponsor.form.label.gold" path="sponsor"/>
 
 
 
