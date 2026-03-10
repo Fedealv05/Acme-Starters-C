@@ -33,8 +33,8 @@ master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.invention ##########################################################
 
-master.menu.invention= Inventions
-master.menu.invention.list = Invention list
+master.menu.inventor = Inventor
+master.menu.inventor.invention.list = My inventions
 
 # master.menu.user-account ####################################################
 

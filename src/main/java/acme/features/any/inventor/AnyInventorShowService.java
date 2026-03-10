@@ -26,14 +26,15 @@ public class AnyInventorShowService extends AbstractService<Any, Inventor> {
 	}
 
 	@Override
-	public void authorise() { //PREGUNTAR
+	public void authorise() {
 		boolean status = true;
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.inventor, "bio", "keyWords", "licensed");
+		super.unbindObject(this.inventor, "bio", "keyWords", "licensed", "userAccount.username");
+
 	}
 
 }

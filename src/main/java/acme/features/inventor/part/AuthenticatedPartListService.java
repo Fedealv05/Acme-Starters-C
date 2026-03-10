@@ -1,22 +1,22 @@
 
-package acme.features.any.part;
+package acme.features.inventor.part;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.inventions.Part;
+import acme.realms.Inventor;
 
 @Service
-public class AnyPartListService extends AbstractService<Any, Part> {
+public class AuthenticatedPartListService extends AbstractService<Inventor, Part> {
 
 	@Autowired
-	private AnyPartRepository	repository;
+	private AuthenticatedPartRepository	repository;
 
-	private List<Part>			parts;
+	private List<Part>					parts;
 
 
 	@Override
@@ -29,8 +29,7 @@ public class AnyPartListService extends AbstractService<Any, Part> {
 
 	@Override
 	public void authorise() {
-		boolean status;
-		status = this.parts.stream().allMatch(i -> i.getInvention().getDraftMode() == false);
+		boolean status = true;
 		super.setAuthorised(status);
 	}
 

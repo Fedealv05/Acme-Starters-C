@@ -38,8 +38,11 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRealm('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
-		<acme:menu-option code="master.menu.invention" access="isAnonymous()">
+		<acme:menu-option code="master.menu.any">
 			<acme:menu-suboption code="master.menu.invention.list" action="/any/invention/list"/>
+		</acme:menu-option>
+		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
+			<acme:menu-suboption code="master.menu.inventor.invention.list" action="/inventor/invention/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 

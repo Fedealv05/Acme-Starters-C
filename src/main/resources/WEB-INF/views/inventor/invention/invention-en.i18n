@@ -1,0 +1,22 @@
+#Invention Form #######################################################
+
+inventor.invention.form.label.ticker= Ticker
+inventor.invention.form.label.name = Name
+inventor.invention.form.label.description = Description
+inventor.invention.form.label.moreInfo = More Info
+inventor.invention.form.label.startMoment= Start Moment
+inventor.invention.form.label.endMoment= End Moment
+
+inventor.invention.form.label.parts = View parts
+inventor.invention.form.label.inventor = View inventor
+
+inventor.invention.form.title= Invention
+
+#Invention List #######################################################
+
+inventor.invention.list.label.ticker= Ticker
+inventor.invention.list.label.name = Name
+inventor.invention.list.label.startMoment= Start Moment
+inventor.invention.list.label.endMoment= End Moment
+
+inventor.invention.list.title = Inventions
