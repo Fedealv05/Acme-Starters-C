@@ -31,10 +31,15 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
-# master.menu.invention ##########################################################
+# master.menu.inventor ##########################################################
 
-master.menu.invention= Invenciones
-master.menu.invention.list = Lista de invenciones
+master.menu.inventor = Inventor
+master.menu.inventor.invention.list = Mis invenciones
+
+# master.menu.any ##########################################################
+
+
+master.menu.invention = Invenciones
 master.menu.strategy= Estrategias
 master.menu.fundraiser = Recaudador
 
