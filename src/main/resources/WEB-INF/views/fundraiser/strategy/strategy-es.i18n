@@ -1,0 +1,24 @@
+#Strategy Form #######################################################
+
+fundraiser.strategy.form.label.ticker = Código
+fundraiser.strategy.form.label.name = Nombre
+fundraiser.strategy.form.label.description = Descripción
+fundraiser.strategy.form.label.startMoment = Momento de inicio
+fundraiser.strategy.form.label.endMoment = Momento de fin
+fundraiser.strategy.form.label.moreInfo = Más Información
+fundraiser.strategy.form.label.monthsActive = Meses activos
+fundraiser.strategy.form.label.expectedPercentage = Porcentaje esperado
+
+fundraiser.strategy.form.label.tactics = Ver tácticas
+
+fundraiser.strategy.form.title = Estrategia
+
+#Strategy List #######################################################
+
+fundraiser.strategy.list.label.ticker = Código
+fundraiser.strategy.list.label.name = Nombre
+fundraiser.strategy.list.label.startMoment = Momento de inicio
+fundraiser.strategy.list.label.endMoment = Momento de fin
+
+fundraiser.strategy.list.title = Mis Estrategias
+fundraiser.strategy.form.title = Detalles de la Estrategia

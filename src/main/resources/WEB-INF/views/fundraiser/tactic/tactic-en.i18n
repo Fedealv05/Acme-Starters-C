@@ -1,0 +1,16 @@
+#Tactic Form (Fundraiser) ############################################
+
+fundraiser.tactic.form.label.name = Name
+fundraiser.tactic.form.label.kind = Kind
+fundraiser.tactic.form.label.notes = Notes
+fundraiser.tactic.form.label.expectedPercentage = Expected Percentage
+
+fundraiser.tactic.form.title = Tactic Details
+
+#Tactic List (Fundraiser) ############################################
+
+fundraiser.tactic.list.label.name = Name
+fundraiser.tactic.list.label.kind = Kind
+fundraiser.tactic.list.label.expectedPercentage = Expected Percentage
+
+fundraiser.tactic.list.title = Tactics

@@ -31,10 +31,17 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
-# master.menu.invention ##########################################################
+# master.menu.inventor ##########################################################
 
 master.menu.inventor = Inventor
 master.menu.inventor.invention.list = My inventions
+
+# master.menu.any ##########################################################
+
+
+master.menu.invention = Inventions
+master.menu.strategy= Strategies
+master.menu.fundraiser = Fundraiser
 
 # master.menu.user-account ####################################################
 
@@ -44,3 +51,11 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
+
+# master.menu.sponsorship ####################################################
+
+master.menu.sponsorship = Sponsorship
+master.menu.sponsorship.list = List sponsorships
+master.menu.authsponsorship = Sponsorship
+master.menu.authsponsorship.list = My sponsorships
+
