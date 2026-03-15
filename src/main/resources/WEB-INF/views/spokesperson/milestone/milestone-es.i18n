@@ -1,0 +1,16 @@
+#Milestone Form #######################################################
+
+spokesperson.milestone.form.label.title = Título
+spokesperson.milestone.form.label.kind = Tipo
+spokesperson.milestone.form.label.achievements = Logros
+spokesperson.milestone.form.label.effort = Esfuerzo
+
+spokesperson.milestone.form.title = Hito
+
+#Milestone List #######################################################
+
+spokesperson.milestone.list.label.title = Título
+spokesperson.milestone.list.label.kind = Tipo
+spokesperson.milestone.list.label.effort = Esfuerzo
+
+spokesperson.milestone.list.title = Hitos

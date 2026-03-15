@@ -52,9 +52,18 @@ master.menu.user-account.provider-profile = Perfil de proveedor
 master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.consumer-profile = Perfil de consumidor
 
+
+# master.menu.campaign ##########################################################
+
+master.menu.campaign= Campañas
+master.menu.campaign.list = Lista de campañas
+master.menu.spokesperson= Portavoz
+master.menu.spokesperson.campaign.list = Mis campañas
+
 # master.menu.sponsorship ####################################################
 
 master.menu.sponsorship = Patrocinio
 master.menu.sponsorship.list = Lista de patrocinadores
 master.menu.authsponsorship = Patrocinio
 master.menu.authsponsorship.list = Mis patrocinios
+

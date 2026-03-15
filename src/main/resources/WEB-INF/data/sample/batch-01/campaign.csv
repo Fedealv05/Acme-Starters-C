@@ -1,7 +1,7 @@
-key,key:spokesPerson,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
-campaign-01,spokesperson-01,FIN-001,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com, true
-campaign-02,spokesperson-02,TEC-002,IA Responsable,Iniciativa para la divulgación de prácticas éticas en el desarrollo de software.,2026/05/15 09:00,2026/08/15 09:00,https://www.etica-ia.org, true
-campaign-03,spokesperson-01,INV-003,Inversores del Mañana,Serie de conferencias para jóvenes inversores en mercados emergentes.,2026/06/20 12:00,2026/12/20 12:00,https://www.inversores.com, true
+key,key:spokesperson,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+campaign-01,spokesperson-01,FIN-001,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com, false
+campaign-02,spokesperson-02,TEC-002,IA Responsable,Iniciativa para la divulgación de prácticas éticas en el desarrollo de software.,2026/05/15 09:00,2026/08/15 09:00,https://www.etica-ia.org, false
+campaign-03,spokesperson-01,INV-003,Inversores del Mañana,Serie de conferencias para jóvenes inversores en mercados emergentes.,2026/06/20 12:00,2026/12/20 12:00,https://www.inversores.com, false
 campaign-04,spokesperson-02,INV-1,Inversores del Mañana,Serie de conferencias para jóvenes inversores en mercados emergentes.,2026/06/20 12:00,2026/12/20 12:00,https://www.inversores.com, true
 campaign-05,spokesperson-02,INV-01,Inversores del Mañana,Serie de conferencias para jóvenes inversores en mercados emergentes.,2026/06/20 12:00,2026/12/20 12:00,https://www.inversores.com, true
 campaign-06,spokesperson-02,TECNICAS-123456,IA Responsable,Iniciativa para la divulgación de prácticas éticas en el desarrollo de software.,2026/05/15 09:00,2026/08/15 09:00,https://www.etica-ia.org, true
