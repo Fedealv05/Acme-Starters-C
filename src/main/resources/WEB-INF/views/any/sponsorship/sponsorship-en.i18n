@@ -1,0 +1,25 @@
+#Sponsorship Form #######################################################
+
+any.sponsorship.form.label.ticker = Ticker
+any.sponsorship.form.label.name = Name
+any.sponsorship.form.label.description = Description
+any.sponsorship.form.label.moreInfo = More Information
+any.sponsorship.form.label.startMoment = Start Moment
+any.sponsorship.form.label.endMoment = End Moment
+any.sponsorship.list.label.draftMode = Draft Mode
+
+any.sponsorship.form.label.donations = View donations
+any.sponsorship.form.label.sponsor = View sponsor
+
+any.sponsorship.form.title = Sponsorship
+sponsor.sponsorship.form.title = Sponsorship
+
+#Sponsorship List #######################################################
+
+any.sponsorship.list.label.ticker = Ticker
+any.sponsorship.list.label.name = Name
+any.sponsorship.list.label.startMoment = Start Moment
+any.sponsorship.list.label.endMoment = End Moment
+
+any.sponsorship.list.title = Sponsorships
+sponsor.sponsorship.list.title = Sponsorships

@@ -31,6 +31,18 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.inventor ##########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.invention.list = My inventions
+
+# master.menu.any ##########################################################
+
+
+master.menu.invention = Inventions
+master.menu.strategy= Strategies
+master.menu.fundraiser = Fundraiser
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -40,13 +52,19 @@ master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
 
+
 # master.menu.campaign ##########################################################
 
 master.menu.campaign= Campaigns
 master.menu.campaign.list = Campaign list
-
-# master.menu.campaign ##########################################################
-
 master.menu.spokesperson= Spokesperson
 master.menu.spokesperson.campaign.list = My campaigns
+
+# master.menu.sponsorship ####################################################
+
+master.menu.sponsorship = Sponsorship
+master.menu.sponsorship.list = List sponsorships
+master.menu.authsponsorship = Sponsorship
+master.menu.authsponsorship.list = My sponsorships
+
 

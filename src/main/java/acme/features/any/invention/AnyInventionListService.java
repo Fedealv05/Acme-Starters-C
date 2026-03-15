@@ -26,7 +26,7 @@ public class AnyInventionListService extends AbstractService<Any, Invention> {
 	}
 
 	@Override
-	public void authorise() { //PREGUNTAR
+	public void authorise() {
 		boolean status = true;
 		super.setAuthorised(status);
 	}

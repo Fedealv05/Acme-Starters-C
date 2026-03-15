@@ -1,0 +1,17 @@
+#Donation Form #######################################################
+
+any.donation.form.label.name = Name
+any.donation.form.label.notes = Notes
+any.donation.form.label.money = Amount
+any.donation.form.label.kind = Kind
+
+any.donation.form.title = Donation
+
+#Donation List #######################################################
+
+any.donation.list.label.name = Name
+any.donation.list.label.notes = Notes
+any.donation.list.label.money = Amount
+any.donation.list.label.kind = Kind
+
+any.donation.list.title = Donations

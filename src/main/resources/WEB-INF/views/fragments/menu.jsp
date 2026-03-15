@@ -38,8 +38,19 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRealm('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
-		<acme:menu-option code="master.menu.invention" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.invention.list" action="/any/invention/list"/>
+		<acme:menu-option code="master.menu.anonymous">
+			<acme:menu-suboption code="master.menu.invention" action="/any/invention/list"/>
+			<acme:menu-suboption code="master.menu.strategy" action="/any/strategy/list"/>
+			<acme:menu-suboption code="master.menu.sponsorship.list" action="/any/sponsorship/list"/>
+		</acme:menu-option>
+		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
+			<acme:menu-suboption code="master.menu.strategy" action="/fundraiser/strategy/list"/>
+		</acme:menu-option>
+		<acme:menu-option code="master.menu.authsponsorship" access="hasRealm('Sponsor')">
+			<acme:menu-suboption code="master.menu.authsponsorship.list" action="/sponsor/sponsorship/list"/>
+		</acme:menu-option>
+		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
+			<acme:menu-suboption code="master.menu.inventor.invention.list" action="/inventor/invention/list"/>
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.campaign">
 			<acme:menu-suboption code="master.menu.campaign.list" action="/any/campaign/list"/>
