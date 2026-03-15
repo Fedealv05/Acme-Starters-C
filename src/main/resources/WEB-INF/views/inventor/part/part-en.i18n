@@ -1,0 +1,16 @@
+#Part Form #######################################################
+
+inventor.part.form.label.name = Name
+inventor.part.form.label.kind = Kind
+inventor.part.form.label.description = Description
+inventor.part.form.label.cost = Cost
+
+inventor.part.form.title = Part
+
+#Part List #######################################################
+
+inventor.part.list.label.name = Name
+inventor.part.list.label.kind = Kind
+inventor.part.list.label.cost = Cost
+
+inventor.part.list.title = Parts

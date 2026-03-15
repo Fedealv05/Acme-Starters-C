@@ -11,4 +11,4 @@ part-009,Base Part Name,"Lorem ipsum dolor sit amet, consectetur adipiscing elit
 part-010,Base Part Name,This is a standard base description for testing parts.,EUR 0.00,OPTIONAL,invention-001
 part-011,Base Part Name,This is a standard base description for testing parts.,EUR 0.01,OPTIONAL,invention-002
 part-012,Base Part Name,This is a standard base description for testing parts.,EUR 999999.99,MANDATORY,invention-003
-part-013,Base Part Name,This is a standard base description for testing parts.,EUR 50.00,CORE,invention-001
+part-013,Base Part Name,This is a standard base description for testing parts.,EUR 50.00,CORE,invention-030

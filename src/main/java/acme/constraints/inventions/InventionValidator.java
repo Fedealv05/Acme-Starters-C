@@ -43,7 +43,7 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 			}
 			{
 				boolean validTimeInterval;
-				validTimeInterval = invention.getStartMoment().before(invention.getEndMoment()) || invention.getStartMoment() == null || invention.getEndMoment() == null;
+				validTimeInterval = invention.getStartMoment() == null || invention.getEndMoment() == null || invention.getStartMoment().before(invention.getEndMoment());
 
 				super.state(context, validTimeInterval, "*", "acme.validation.invention.timeInterval.message");
 			}
@@ -59,7 +59,6 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 
 				super.state(context, validParts, "draftMode", "acme.validation.invention.parts.message");
 			}
-			//COMPROBAR QUE las fechas están en el futuro en el servicio
 			return !super.hasErrors(context);
 
 		}

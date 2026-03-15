@@ -16,7 +16,7 @@ public class InventorInventionListService extends AbstractService<Inventor, Inve
 	@Autowired
 	private InventorInventionRepository	repository;
 
-	private List<Invention>						inventions;
+	private List<Invention>				inventions;
 
 
 	@Override
@@ -35,7 +35,7 @@ public class InventorInventionListService extends AbstractService<Inventor, Inve
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.inventions, "ticker", "name", "startMoment", "endMoment");
+		super.unbindObjects(this.inventions, "ticker", "name", "startMoment", "endMoment", "draftMode");
 	}
 
 }

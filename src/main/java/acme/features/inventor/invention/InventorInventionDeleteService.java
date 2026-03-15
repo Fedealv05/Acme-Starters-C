@@ -9,16 +9,12 @@ import acme.entities.inventions.Invention;
 import acme.realms.Inventor;
 
 @Service
-public class InventorInventionShowService extends AbstractService<Inventor, Invention> {
-
-	// Internal state ---------------------------------------------------------
+public class InventorInventionDeleteService extends AbstractService<Inventor, Invention> {
 
 	@Autowired
 	private InventorInventionRepository	repository;
 
 	private Invention					invention;
-
-	// AbstractService interface ----------------------------------------------
 
 
 	@Override
@@ -33,14 +29,31 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	public void authorise() {
 		boolean status;
 
-		status = this.invention.getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		boolean createdByThePrincipal;
+		createdByThePrincipal = this.invention.getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+
+		status = createdByThePrincipal && this.invention.getDraftMode();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
+	public void execute() {
+		this.repository.delete(this.invention);
+	}
+	@Override
+	public void validate() {
+		super.validateObject(this.invention);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+	}
+
+	@Override
 	public void unbind() {
-		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "cost", "monthsActive", "draftMode");
+		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "cost", "monthsActive");
 		super.unbindGlobal("inventorId", this.invention.getInventor().getId());
 	}
 
