@@ -17,4 +17,6 @@ public interface InventorInventionRepository extends AbstractRepository {
 	@Query("select i from Invention i where i.id = :id")
 	Invention findInventionById(int id);
 
+	Invention findByTicker(String ticker);
+
 }

@@ -50,7 +50,7 @@ public class MoneyWithCurrencyValidator extends AbstractValidator<ValidMoneyWith
 		if (value == null)
 			result = true;
 		else {
-			result = this.lowerLimit <= value.getAmount() && value.getAmount() <= this.upperLimit;
+			result = value.getAmount() == null || this.lowerLimit <= value.getAmount() && value.getAmount() <= this.upperLimit;
 
 			if (!result)
 				HibernateHelper.replaceParameter(hibernateContext, "placeholder", "acme.validation.range.message", this.lowerLimit, this.upperLimit);

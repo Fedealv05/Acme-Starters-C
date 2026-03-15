@@ -99,8 +99,10 @@ public class Invention extends AbstractEntity {
 	public Money getCost() {
 		Double sum = this.repository.sumPriceByInventionId(this.getId());
 		Money result = new Money();
-		result.setAmount(sum);
+
+		result.setAmount(sum == null ? 0.0 : sum);
 		result.setCurrency("EUR");
+
 		return result;
 	}
 
