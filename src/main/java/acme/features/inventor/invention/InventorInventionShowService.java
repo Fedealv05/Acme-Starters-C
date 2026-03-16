@@ -33,7 +33,7 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	public void authorise() {
 		boolean status;
 
-		status = this.invention.getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		status = this.invention != null && this.invention.getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
 
 		super.setAuthorised(status);
 	}

@@ -41,7 +41,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 		boolean createdByThePrincipal;
 		createdByThePrincipal = this.invention.getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
 
-		status = createdByThePrincipal && this.invention.getDraftMode();
+		status = this.invention != null && createdByThePrincipal && this.invention.getDraftMode();
 
 		super.setAuthorised(status);
 	}
@@ -82,7 +82,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "cost", "monthsActive");
+		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "cost", "monthsActive", "draftMode");
 		super.unbindGlobal("inventorId", this.invention.getInventor().getId());
 	}
 
