@@ -20,7 +20,6 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.sponsorship = this.repository.findSponsorshipById(id);
 	}
@@ -31,7 +30,6 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 		int sponsorId;
 
 		sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-
 		status = this.sponsorship != null && this.sponsorship.getSponsor().getId() == sponsorId;
 
 		super.setAuthorised(status);
@@ -39,6 +37,7 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.sponsorship, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		super.unbindObject(this.sponsorship, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "totalMoney", "monthsActive", "draftMode");
+		super.unbindGlobal("sponsorId", this.sponsorship.getSponsor().getId());
 	}
 }

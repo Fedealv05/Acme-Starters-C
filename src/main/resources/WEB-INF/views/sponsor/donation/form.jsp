@@ -9,4 +9,14 @@
 <acme:form-money code="any.donation.form.label.money" path="money"/>
 <acme:form-textbox code="any.donation.form.label.kind" path="kind"/>
 
+<jstl:choose>
+    <jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">
+        <acme:submit code="sponsor.donation.form.button.update" action="/sponsor/donation/update"/>
+        <acme:submit code="sponsor.donation.form.button.delete" action="/sponsor/donation/delete"/>
+    </jstl:when>
+    <jstl:when test="${_command == 'create'}">
+        <acme:submit code="sponsor.donation.form.button.create" action="/sponsor/donation/create?sponsorshipId=${sponsorshipId}"/>
+    </jstl:when>
+</jstl:choose>
+
 </acme:form>
