@@ -12,8 +12,8 @@
 	<acme:form-url code="fundraiser.strategy.form.label.moreInfo" path="moreInfo"/>
 	
 	<jstl:if test="${_command == 'show'}">
-		<acme:form-textbox code="fundraiser.strategy.form.label.monthsActive" path="monthsActive"/>
-		<acme:form-textbox code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage"/>
+		<acme:form-textbox code="fundraiser.strategy.form.label.monthsActive" path="monthsActive" readonly="true"/>
+		<acme:form-textbox code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage" readonly="true"/>
 	</jstl:if>
 
 	<jstl:choose>
