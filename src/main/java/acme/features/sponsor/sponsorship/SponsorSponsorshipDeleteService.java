@@ -1,10 +1,13 @@
 
 package acme.features.sponsor.sponsorship;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
+import acme.entities.sponsorships.Donation;
 import acme.entities.sponsorships.Sponsorship;
 import acme.realms.Sponsor;
 
@@ -37,6 +40,12 @@ public class SponsorSponsorshipDeleteService extends AbstractService<Sponsor, Sp
 
 	@Override
 	public void execute() {
+		Collection<Donation> donations;
+		int id;
+		id = super.getRequest().getData("id", int.class);
+		donations = this.repository.findDonationsBySponsorshipId(id);
+		donations.stream().forEach(d -> this.repository.delete(d));
+
 		this.repository.delete(this.sponsorship);
 	}
 

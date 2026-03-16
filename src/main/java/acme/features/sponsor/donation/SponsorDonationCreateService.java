@@ -4,7 +4,9 @@ package acme.features.sponsor.donation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
+import acme.datatypes.DonationKind;
 import acme.entities.sponsorships.Donation;
 import acme.entities.sponsorships.Sponsorship;
 import acme.features.sponsor.sponsorship.SponsorSponsorshipRepository;
@@ -70,5 +72,7 @@ public class SponsorDonationCreateService extends AbstractService<Sponsor, Donat
 
 		super.unbindGlobal("draftMode", this.donation.getSponsorship().getDraftMode());
 		super.unbindGlobal("sponsorshipId", this.sponsorship.getId());
+		SelectChoices choices = SelectChoices.from(DonationKind.class, this.donation.getKind());
+		super.unbindGlobal("donationKinds", choices);
 	}
 }
