@@ -26,7 +26,7 @@ public class FundraiserStrategyShowService extends AbstractService<Fundraiser, S
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		this.strategy = this.repository.findStrategyById(id);
+		this.strategy = this.repository.findOneById(id);
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class FundraiserStrategyShowService extends AbstractService<Fundraiser, S
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "expectedPercentage");
+		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "expectedPercentage", "draftMode");
 
 		super.unbindGlobal("fundraiserId", this.strategy.getFundraiser().getId());
 	}

@@ -13,6 +13,12 @@ fundraiser.strategy.form.label.tactics = Ver tácticas
 
 fundraiser.strategy.form.title = Estrategia
 
+fundraiser.strategy.form.button.tactics = Tácticas
+fundraiser.strategy.form.button.update = Actualizar
+fundraiser.strategy.form.button.delete = Borrar
+fundraiser.strategy.form.button.publish = Publicar
+fundraiser.strategy.form.button.create = Crear
+
 #Strategy List #######################################################
 
 fundraiser.strategy.list.label.ticker = Código
