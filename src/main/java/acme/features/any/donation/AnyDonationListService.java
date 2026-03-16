@@ -29,7 +29,11 @@ public class AnyDonationListService extends AbstractService<Any, Donation> {
 
 	@Override
 	public void authorise() {
-		boolean status = true;
+
+		final String sponsorshipId = super.getRequest().getData("sponsorshipId", String.class);
+
+		boolean status = sponsorshipId != null && !sponsorshipId.trim().isEmpty() && this.donations.stream().allMatch(i -> i.getSponsorship().getDraftMode() == false);
+
 		super.setAuthorised(status);
 	}
 
