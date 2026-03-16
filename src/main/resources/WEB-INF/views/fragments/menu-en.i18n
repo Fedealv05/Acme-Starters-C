@@ -55,10 +55,18 @@ master.menu.user-account.consumer-profile = Consumer profile
 master.menu.user-account.become-inventor= Become an inventor
 master.menu.user-account.inventor-profile= Inventor profile
 
+# master.menu.campaign ##########################################################
+
+master.menu.campaign= Campaigns
+master.menu.campaign.list = Campaign list
+master.menu.spokesperson= Spokesperson
+master.menu.spokesperson.campaign.list = My campaigns
+
 # master.menu.sponsorship ####################################################
 
 master.menu.sponsorship = Sponsorship
 master.menu.sponsorship.list = List sponsorships
 master.menu.authsponsorship = Sponsorship
 master.menu.authsponsorship.list = My sponsorships
+
 
