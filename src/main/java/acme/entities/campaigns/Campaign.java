@@ -18,11 +18,12 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
-import acme.realms.SpokesPerson;
+import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -75,12 +76,12 @@ public class Campaign extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private SpokesPerson		spokesPerson;
+	private Spokesperson		spokesperson;
 
 
 	@Transient
 	@Valid
-	public Double monthsActive() {
+	public Double getMonthsActive() {
 		double result = 0.0;
 		if (this.startMoment != null && this.endMoment != null) {
 			long diff = this.endMoment.getTime() - this.startMoment.getTime();
@@ -91,8 +92,8 @@ public class Campaign extends AbstractEntity {
 	}
 
 	@Transient
-	//@ValidNumber(positive)
-	public Double effort() {
+	@ValidNumber(min = 0)
+	public Double getEffort() {
 		return this.repository.findTotalEffortByCampaignId(this.getId());
 	}
 

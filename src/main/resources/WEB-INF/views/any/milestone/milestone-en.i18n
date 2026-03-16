@@ -1,0 +1,16 @@
+#Milestone Form #######################################################
+
+any.milestone.form.label.title = Title
+any.milestone.form.label.kind = Kind
+any.milestone.form.label.achievements = Achievements
+any.milestone.form.label.effort = Effort
+
+any.milestone.form.title = Milestone
+
+#Milestone List #######################################################
+
+any.milestone.list.label.title = Title
+any.milestone.list.label.kind = Kind
+any.milestone.list.label.effort = Effort
+
+any.milestone.list.title = Milestones
