@@ -38,7 +38,6 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 
 		status = createdByThePrincipal && alreadyExistingTicker && this.invention.getDraftMode();
 
-		status = true;
 		super.setAuthorised(status);
 	}
 
