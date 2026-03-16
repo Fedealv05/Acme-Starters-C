@@ -32,7 +32,7 @@ public class InventorPartDeleteService extends AbstractService<Inventor, Part> {
 		boolean createdByThePrincipal;
 		createdByThePrincipal = this.part.getInvention().getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
 
-		status = createdByThePrincipal && this.part.getInvention().getDraftMode();
+		status = this.part != null && createdByThePrincipal && this.part.getInvention().getDraftMode();
 
 		super.setAuthorised(status);
 	}

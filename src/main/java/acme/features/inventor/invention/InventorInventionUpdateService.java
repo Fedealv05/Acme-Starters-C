@@ -36,7 +36,7 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 		Invention existingInvention = this.repository.findByTicker(this.getRequest().getData("ticker", String.class));
 		alreadyExistingTicker = existingInvention == null || existingInvention.getId() == this.invention.getId();
 
-		status = createdByThePrincipal && alreadyExistingTicker && this.invention.getDraftMode();
+		status = this.invention != null && createdByThePrincipal && alreadyExistingTicker && this.invention.getDraftMode();
 
 		super.setAuthorised(status);
 	}
@@ -58,7 +58,7 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "cost", "monthsActive");
+		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "cost", "monthsActive", "draftMode");
 		super.unbindGlobal("inventorId", this.invention.getInventor().getId());
 	}
 

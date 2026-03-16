@@ -32,7 +32,7 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 		boolean createdByThePrincipal;
 		createdByThePrincipal = this.invention.getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
 
-		status = createdByThePrincipal && this.invention.getDraftMode();
+		status = this.invention != null && createdByThePrincipal && this.invention.getDraftMode();
 
 		super.setAuthorised(status);
 	}
@@ -53,7 +53,7 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "cost", "monthsActive");
+		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "cost", "monthsActive", "draftMode");
 		super.unbindGlobal("inventorId", this.invention.getInventor().getId());
 	}
 

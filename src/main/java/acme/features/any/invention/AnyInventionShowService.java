@@ -32,7 +32,7 @@ public class AnyInventionShowService extends AbstractService<Any, Invention> {
 	@Override
 	public void authorise() {
 		boolean status;
-		status = !this.invention.getDraftMode();
+		status = this.invention != null && !this.invention.getDraftMode();
 
 		super.setAuthorised(status);
 	}
@@ -40,7 +40,7 @@ public class AnyInventionShowService extends AbstractService<Any, Invention> {
 	@Override
 	public void unbind() {
 		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "cost", "monthsActive");
-		
+
 		super.unbindGlobal("inventorId", this.invention.getInventor().getId());
 	}
 

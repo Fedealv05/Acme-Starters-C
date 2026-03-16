@@ -11,10 +11,8 @@
 <acme:form-moment code="inventor.invention.form.label.startMoment" path="startMoment"/>
 <acme:form-moment code="inventor.invention.form.label.endMoment" path="endMoment"/>
 
-<jstl:if test="${_command == 'show'}">
-<acme:form-money code="inventor.invention.form.label.cost" path="cost"/>
-<acme:form-textbox code="inventor.invention.form.label.monthsActive" path="monthsActive"/>
-</jstl:if>
+<acme:form-money code="inventor.invention.form.label.cost" path="cost" readonly="true"/>
+<acme:form-textbox code="inventor.invention.form.label.monthsActive" path="monthsActive" readonly="true"/>
 
 <jstl:choose>
     <jstl:when test="${_command == 'show' && draftMode == false}">
