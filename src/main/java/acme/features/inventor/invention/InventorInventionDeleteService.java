@@ -1,11 +1,15 @@
 
 package acme.features.inventor.invention;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
 import acme.entities.inventions.Invention;
+import acme.entities.inventions.Part;
+import acme.features.inventor.part.InventorPartRepository;
 import acme.realms.Inventor;
 
 @Service
@@ -13,6 +17,9 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 
 	@Autowired
 	private InventorInventionRepository	repository;
+
+	@Autowired
+	private InventorPartRepository		partRepository;
 
 	private Invention					invention;
 
@@ -39,6 +46,14 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 
 	@Override
 	public void execute() {
+		List<Part> parts;
+
+		int id;
+		id = super.getRequest().getData("id", int.class);
+
+		parts = this.partRepository.findByInventionId(id);
+		parts.stream().forEach(m -> this.partRepository.delete(m));
+
 		this.repository.delete(this.invention);
 	}
 	@Override

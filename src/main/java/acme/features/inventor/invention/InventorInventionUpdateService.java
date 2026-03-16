@@ -32,11 +32,7 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 		boolean createdByThePrincipal;
 		createdByThePrincipal = this.invention.getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
 
-		boolean alreadyExistingTicker;
-		Invention existingInvention = this.repository.findByTicker(this.getRequest().getData("ticker", String.class));
-		alreadyExistingTicker = existingInvention == null || existingInvention.getId() == this.invention.getId();
-
-		status = this.invention != null && createdByThePrincipal && alreadyExistingTicker && this.invention.getDraftMode();
+		status = this.invention != null && createdByThePrincipal && this.invention.getDraftMode();
 
 		super.setAuthorised(status);
 	}

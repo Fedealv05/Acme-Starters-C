@@ -5,7 +5,7 @@
 
 <acme:form>
 <acme:form-textbox code="inventor.part.form.label.name" path="name"/>
-<acme:form-textbox code="inventor.part.form.label.kind" path="kind"/>
+<acme:form-select code="inventor.part.form.label.kind" path="kind" choices="${kinds}"/>
 <acme:form-textarea code="inventor.part.form.label.description" path="description"/>
 <acme:form-money code="inventor.part.form.label.cost" path="cost"/>
 
