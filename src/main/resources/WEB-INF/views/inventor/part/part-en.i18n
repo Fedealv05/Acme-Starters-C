@@ -5,6 +5,10 @@ inventor.part.form.label.kind = Kind
 inventor.part.form.label.description = Description
 inventor.part.form.label.cost = Cost
 
+inventor.part.form.button.create = Create
+inventor.part.form.button.update= Update
+inventor.part.form.button.delete = Delete
+
 inventor.part.form.title = Part
 
 #Part List #######################################################
@@ -12,5 +16,7 @@ inventor.part.form.title = Part
 inventor.part.list.label.name = Name
 inventor.part.list.label.kind = Kind
 inventor.part.list.label.cost = Cost
+
+inventor.part.list.button.create= Create
 
 inventor.part.list.title = Parts
