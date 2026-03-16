@@ -1,4 +1,4 @@
-# messages-es.i18n
+# messages-en.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
 #
@@ -8,8 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.fundraiser.form.label.bank = Banco
-authenticated.fundraiser.form.label.statement = Declaración
-authenticated.fundraiser.form.label.agent = ¿Es agente?
-authenticated.fundraiser.form.button.create = Crear
-authenticated.fundraiser.form.button.update = Actualizar
+authenticated.fundraiser.form.label.bank = Bank
+authenticated.fundraiser.form.label.statement = Statement
+authenticated.fundraiser.form.label.agent = Is agent?
+authenticated.fundraiser.form.button.create = Create
+authenticated.fundraiser.form.button.update = Update

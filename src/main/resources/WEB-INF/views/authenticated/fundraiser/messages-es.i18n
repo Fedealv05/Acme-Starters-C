@@ -8,8 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.fundraiser.form.label.bank = Banco
-authenticated.fundraiser.form.label.statement = Declaración
-authenticated.fundraiser.form.label.agent = ¿Es agente?
-authenticated.fundraiser.form.button.create = Crear
-authenticated.fundraiser.form.button.update = Actualizar
+authenticated.inventor.form.title = Inventor form
+
+authenticated.inventor.form.label.bio = Bio
+authenticated.inventor.form.label.keyWords = Palabras clave
+authenticated.inventor.form.label.licensed = Licenciado
+
+authenticated.inventor.form.button.create = Registrar
+authenticated.inventor.form.button.update = Actualizar
