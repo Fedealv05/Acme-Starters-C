@@ -1,0 +1,24 @@
+# Sponsorship - Lista
+sponsor.sponsorship.list.label.ticker = Ticker
+sponsor.sponsorship.list.label.name = Nombre
+sponsor.sponsorship.list.label.startMoment = Momento de inicio
+sponsor.sponsorship.list.label.endMoment = Momento de fin
+sponsor.sponsorship.list.label.draftMode = ¿Borrador?
+sponsor.sponsorship.list.button.create = Crear patrocinio
+
+# Sponsorship - Formulario (Etiquetas)
+sponsor.sponsorship.form.label.ticker = Ticker
+sponsor.sponsorship.form.label.name = Nombre
+sponsor.sponsorship.form.label.description = Descripción
+sponsor.sponsorship.form.label.moreInfo = Más información (URL)
+sponsor.sponsorship.form.label.startMoment = Momento de inicio
+sponsor.sponsorship.form.label.endMoment = Momento de fin
+sponsor.sponsorship.form.label.totalMoney = Dinero total
+sponsor.sponsorship.form.label.monthsActive = Meses activo
+
+# Sponsorship - Formulario (Botones)
+sponsor.sponsorship.form.button.donations = Ver donaciones
+sponsor.sponsorship.form.button.update = Actualizar
+sponsor.sponsorship.form.button.delete = Borrar
+sponsor.sponsorship.form.button.publish = Publicar
+sponsor.sponsorship.form.button.create = Crear

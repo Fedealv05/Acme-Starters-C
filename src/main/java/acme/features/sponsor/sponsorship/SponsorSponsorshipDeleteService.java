@@ -9,7 +9,7 @@ import acme.entities.sponsorships.Sponsorship;
 import acme.realms.Sponsor;
 
 @Service
-public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Sponsorship> {
+public class SponsorSponsorshipDeleteService extends AbstractService<Sponsor, Sponsorship> {
 
 	@Autowired
 	private SponsorSponsorshipRepository	repository;
@@ -27,17 +27,23 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 	@Override
 	public void authorise() {
 		boolean status;
-		int sponsorId;
+		boolean createdByThePrincipal;
 
-		sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.sponsorship != null && this.sponsorship.getSponsor().getId() == sponsorId;
+		createdByThePrincipal = this.sponsorship.getSponsor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		status = createdByThePrincipal && this.sponsorship.getDraftMode();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
+	public void execute() {
+		this.repository.delete(this.sponsorship);
+	}
+
+	@Override
 	public void unbind() {
-		super.unbindObject(this.sponsorship, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "totalMoney", "monthsActive", "draftMode");
+		super.unbindObject(this.sponsorship, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 		super.unbindGlobal("sponsorId", this.sponsorship.getSponsor().getId());
 	}
+
 }

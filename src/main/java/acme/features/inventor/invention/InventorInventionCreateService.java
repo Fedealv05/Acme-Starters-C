@@ -28,16 +28,7 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 
 	@Override
 	public void authorise() {
-		boolean status;
-		String method;
-
-		method = super.getRequest().getMethod();
-
-		if (method.equals("GET"))
-			status = true;
-		else
-			status = true;
-		super.setAuthorised(status);
+		super.setAuthorised(true);
 	}
 
 	@Override
