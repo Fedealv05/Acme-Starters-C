@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.consumer;
+package acme.features.authenticated.inventor;
 
 import javax.annotation.PostConstruct;
 
@@ -19,10 +19,10 @@ import org.springframework.stereotype.Controller;
 
 import acme.client.components.principals.Authenticated;
 import acme.client.controllers.AbstractController;
-import acme.realms.Consumer;
+import acme.realms.Inventor;
 
 @Controller
-public class AuthenticatedConsumerController extends AbstractController<Authenticated, Consumer> {
+public class AuthenticatedInventorController extends AbstractController<Authenticated, Inventor> {
 
 	// Constructors -----------------------------------------------------------
 
@@ -30,8 +30,8 @@ public class AuthenticatedConsumerController extends AbstractController<Authenti
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
-		super.addBasicCommand("create", AuthenticatedConsumerCreateService.class);
-		super.addBasicCommand("update", AuthenticatedConsumerUpdateService.class);
+		super.addBasicCommand("create", AuthenticatedInventorCreateService.class);
+		super.addBasicCommand("update", AuthenticatedinventorUpdateService.class);
 	}
 
 }
