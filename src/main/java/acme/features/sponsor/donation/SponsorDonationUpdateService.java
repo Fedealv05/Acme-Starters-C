@@ -21,7 +21,7 @@ public class SponsorDonationUpdateService extends AbstractService<Sponsor, Donat
 	public void load() {
 		int id;
 		id = super.getRequest().getData("id", int.class);
-		this.donation = this.repository.findById(id);
+		this.donation = this.repository.findDonationById(id);
 
 	}
 

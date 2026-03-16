@@ -22,7 +22,7 @@ public class SponsorDonationShowService extends AbstractService<Sponsor, Donatio
 
 		int id;
 		id = super.getRequest().getData("id", int.class);
-		this.donation = this.repository.findById(id);
+		this.donation = this.repository.findDonationById(id);
 
 	}
 

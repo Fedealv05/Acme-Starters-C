@@ -9,11 +9,11 @@
     <acme:form-textarea code="sponsor.sponsorship.form.label.description" path="description"/>
     <acme:form-url code="sponsor.sponsorship.form.label.moreInfo" path="moreInfo"/>
     <acme:form-moment code="sponsor.sponsorship.form.label.startMoment" path="startMoment"/>
-    <acme:form-moment code="sponsor.sponsorship.form.label.endMoment" path="endMoment"/>
+    <acme:form-moment code="sponsor.sponsorship.form.label.endMoment" path="endMoment" />
 
     <jstl:if test="${_command == 'show'}">
-        <acme:form-money code="sponsor.sponsorship.form.label.totalMoney" path="totalMoney"/>
-        <acme:form-textbox code="sponsor.sponsorship.form.label.monthsActive" path="monthsActive"/>
+        <acme:form-money code="sponsor.sponsorship.form.label.totalMoney" path="totalMoney" readonly = "true"/>
+        <acme:form-textbox code="sponsor.sponsorship.form.label.monthsActive" path="monthsActive" readonly = "true"/>
     </jstl:if>
 
     <jstl:choose>
