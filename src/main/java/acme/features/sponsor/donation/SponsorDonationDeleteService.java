@@ -30,7 +30,7 @@ public class SponsorDonationDeleteService extends AbstractService<Sponsor, Donat
 		boolean createdByThePrincipal;
 		createdByThePrincipal = this.donation.getSponsorship().getSponsor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
 
-		status = createdByThePrincipal && this.donation.getSponsorship().getDraftMode();
+		status = this.donation != null && createdByThePrincipal && this.donation.getSponsorship().getDraftMode();
 
 		super.setAuthorised(status);
 	}

@@ -61,6 +61,7 @@ public class SponsorSponsorshipUpdateService extends AbstractService<Sponsor, Sp
 		super.unbindObject(this.sponsorship, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 		super.unbindGlobal("sponsorId", this.sponsorship.getSponsor().getId());
 		super.unbindGlobal("draftMode", this.sponsorship.getDraftMode());
+
 	}
 
 }
