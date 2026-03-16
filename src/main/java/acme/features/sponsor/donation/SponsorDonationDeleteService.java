@@ -9,7 +9,7 @@ import acme.entities.sponsorships.Donation;
 import acme.realms.Sponsor;
 
 @Service
-public class SponsorDonationShowService extends AbstractService<Sponsor, Donation> {
+public class SponsorDonationDeleteService extends AbstractService<Sponsor, Donation> {
 
 	@Autowired
 	private SponsorDonationRepository	repository;
@@ -19,28 +19,43 @@ public class SponsorDonationShowService extends AbstractService<Sponsor, Donatio
 
 	@Override
 	public void load() {
-
 		int id;
 		id = super.getRequest().getData("id", int.class);
 		this.donation = this.repository.findById(id);
-
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
-		int sponsorId;
-		sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.donation != null && this.donation.getSponsorship().getSponsor().getId() == sponsorId;
+		boolean createdByThePrincipal;
+		createdByThePrincipal = this.donation.getSponsorship().getSponsor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+
+		status = createdByThePrincipal && this.donation.getSponsorship().getDraftMode();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
+	public void bind() {
+		super.bindObject(this.donation, "name", "notes", "money", "kind");
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.donation);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.delete(this.donation);
+	}
+
+	@Override
 	public void unbind() {
+
 		super.unbindObject(this.donation, "name", "notes", "money", "kind");
+
 		super.unbindGlobal("draftMode", this.donation.getSponsorship().getDraftMode());
-		super.unbindGlobal("sponsorshipId", this.donation.getSponsorship().getId());
 	}
 
 }

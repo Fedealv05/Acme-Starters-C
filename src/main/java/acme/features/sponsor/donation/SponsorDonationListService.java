@@ -21,6 +21,8 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 
 	private int							sponsorshipId;
 
+	private Sponsorship					sponsorship;
+
 
 	@Override
 	public void load() {
@@ -28,6 +30,8 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 		this.sponsorshipId = this.getRequest().getData("sponsorshipId", int.class);
 
 		this.donations = this.repository.findBySponsorshipId(this.sponsorshipId);
+
+		this.sponsorship = this.repository.findSponsorshipById(this.sponsorshipId);
 	}
 
 	@Override
@@ -46,6 +50,8 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 	@Override
 	public void unbind() {
 		super.unbindObjects(this.donations, "name", "notes", "money", "kind");
+		super.unbindGlobal("draftMode", this.sponsorship.getDraftMode());
+		super.unbindGlobal("sponsorshipId", this.sponsorship.getId());
 	}
 
 }
