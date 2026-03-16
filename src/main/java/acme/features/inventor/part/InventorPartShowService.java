@@ -9,12 +9,12 @@ import acme.entities.inventions.Part;
 import acme.realms.Inventor;
 
 @Service
-public class AuthenticatedPartShowService extends AbstractService<Inventor, Part> {
+public class InventorPartShowService extends AbstractService<Inventor, Part> {
 
 	@Autowired
-	private AuthenticatedPartRepository	repository;
+	private InventorPartRepository	repository;
 
-	private Part						part;
+	private Part					part;
 
 
 	@Override
@@ -35,6 +35,9 @@ public class AuthenticatedPartShowService extends AbstractService<Inventor, Part
 	@Override
 	public void unbind() {
 		super.unbindObject(this.part, "name", "description", "cost", "kind");
+		super.unbindGlobal("draftMode", this.part.getInvention().getDraftMode());
+		super.unbindGlobal("inventionId", this.part.getInvention().getId());
+
 	}
 
 }

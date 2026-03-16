@@ -15,7 +15,7 @@ inventor.invention.form.label.inventor = Ver inventor
 inventor.invention.form.title= Invención
 
 inventor.invention.form.button.create= Crear
-inventor.invention.form.button.update= Actualizar
+inventor.invention.form.button.update= Editar
 inventor.invention.form.button.delete= Eliminar
 inventor.invention.form.button.publish = Publicar
 

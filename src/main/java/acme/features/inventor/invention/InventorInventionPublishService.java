@@ -11,6 +11,7 @@ import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.inventions.Invention;
 import acme.entities.inventions.Part;
+import acme.features.inventor.part.InventorPartRepository;
 import acme.realms.Inventor;
 
 @Service
