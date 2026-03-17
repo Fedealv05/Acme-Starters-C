@@ -35,7 +35,7 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 		boolean createdByThePrincipal;
 
 		createdByThePrincipal = this.sponsorship.getSponsor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = createdByThePrincipal && this.sponsorship.getDraftMode();
+		status = this.sponsorship != null && createdByThePrincipal && this.sponsorship.getDraftMode();
 
 		super.setAuthorised(status);
 	}
