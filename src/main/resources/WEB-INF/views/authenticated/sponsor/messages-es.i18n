@@ -1,0 +1,8 @@
+authenticated.sponsor.form.label.address=Dirección
+authenticated.sponsor.form.label.im=Mensajería instantánea
+authenticated.sponsor.form.label.gold=Patrocinador oro
+
+authenticated.sponsor.form.button.create=Crear
+authenticated.sponsor.form.button.update=Actualizar
+
+authenticated.sponsor.form.title = Perfil

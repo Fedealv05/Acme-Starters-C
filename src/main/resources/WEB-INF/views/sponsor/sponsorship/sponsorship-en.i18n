@@ -22,3 +22,19 @@ sponsor.sponsorship.form.button.update = Update
 sponsor.sponsorship.form.button.delete = Delete
 sponsor.sponsorship.form.button.publish = Publish
 sponsor.sponsorship.form.button.create = Create
+
+sponsor.sponsorship.list.title = Sponsorships
+sponsor.sponsorship.form.title = Sponsorship details
+
+sponsor.donation.list.title = Donations
+sponsor.donation.form.title = Donation details
+
+sponsor.donation.form.label.kind = Kind
+any.donation.list.label.kind = Kind
+
+sponsor.donation.list.button.create = Create donation
+sponsor.donation.form.button.update = Update donation
+sponsor.donation.form.button.delete = Delete donation
+
+acme.validation.header.message = Invalid string
+acme.validation.text.message = Invalid text

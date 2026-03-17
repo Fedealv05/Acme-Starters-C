@@ -1,0 +1,8 @@
+authenticated.sponsor.form.label.address=Address
+authenticated.sponsor.form.label.im=Instant messaging
+authenticated.sponsor.form.label.gold=Gold sponsor
+
+authenticated.sponsor.form.button.create=Create
+authenticated.sponsor.form.button.update=Update
+
+authenticated.sponsor.form.title = Profile
