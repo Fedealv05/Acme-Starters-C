@@ -1,25 +1,21 @@
-#Sponsorship Form #######################################################
+# FORM
+any.sponsorship.form.label.ticker=Identificador
+any.sponsorship.form.label.name=Nombre
+any.sponsorship.form.label.description=Descripción
+any.sponsorship.form.label.moreInfo=Información adicional
+any.sponsorship.form.label.startMoment=Fecha de inicio
+any.sponsorship.form.label.endMoment=Fecha de fin
+any.sponsorship.form.label.totalMoney=Importe total
+any.sponsorship.form.label.monthsActive=Meses activo
 
-any.sponsorship.form.label.ticker= Código
-any.sponsorship.form.label.name = Nombre
-any.sponsorship.form.label.description = Descripción
-any.sponsorship.form.label.moreInfo = Más Información
-any.sponsorship.form.label.startMoment= Momento de inicio
-any.sponsorship.form.label.endMoment= Momento de fin
-any.sponsorship.list.label.draftMode = Borrador
+any.sponsorship.form.label.donations=Donaciones
+any.sponsorship.form.label.sponsor=Patrocinador
 
-any.sponsorship.form.label.donations = Ver donaciones
-any.sponsorship.form.label.sponsor = Ver patrocinador
+# LIST
+any.sponsorship.list.label.ticker=Identificador
+any.sponsorship.list.label.name=Nombre
+any.sponsorship.list.label.startMoment=Fecha de inicio
+any.sponsorship.list.label.endMoment=Fecha de fin
 
-any.sponsorship.form.title= Patrocinio
-sponsor.sponsorship.form.title= Patrocinio
-
-#Sponsorship List #######################################################
-
-any.sponsorship.list.label.ticker= Código
-any.sponsorship.list.label.name = Nombre
-any.sponsorship.list.label.startMoment= Momento de inicio
-any.sponsorship.list.label.endMoment= Momento de fin
-
-any.sponsorship.list.title = Patrocinios
-sponsor.sponsorship.list.title = Patrocinios
+any.sponsorship.form.title=Detalles del patrocinio
+any.sponsorship.list.title=Patrocinio

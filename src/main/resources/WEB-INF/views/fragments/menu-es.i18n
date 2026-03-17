@@ -58,6 +58,9 @@ master.menu.user-account.inventor-profile= Perfil de inventor
 master.menu.user-account.become-fundraiser= Hazte recaudador
 master.menu.user-account.fundraiser-profile= Perfil de recaudador
 
+master.menu.user-account.become-sponsor= Hazte patrocinador
+master.menu.user-account.sponsor-profile= Perfil de patrocinador
+
 # master.menu.campaign ##########################################################
 
 master.menu.campaign= Campañas
