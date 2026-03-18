@@ -9,10 +9,15 @@ spokesperson.campaign.form.label.endMoment= Momento de fin
 spokesperson.campaign.form.label.monthsActive = Meses Activo
 spokesperson.campaign.form.label.effort = Esfuerzo
 
-spokesperson.campaign.form.label.milestones = Ver hitos
+spokesperson.campaign.form.button.milestones = Ver hitos
 spokesperson.campaign.form.label.spokesperson = Ver portavoz
 
 spokesperson.campaign.form.title= Campaña
+
+spokesperson.campaign.form.button.create= Crear
+spokesperson.campaign.form.button.update= Editar
+spokesperson.campaign.form.button.delete= Eliminar
+spokesperson.campaign.form.button.publish = Publicar
 
 #Campaign List #######################################################
 
@@ -22,3 +27,5 @@ spokesperson.campaign.list.label.startMoment= Momento de inicio
 spokesperson.campaign.list.label.endMoment= Momento de fin
 
 spokesperson.campaign.list.title = Campañas
+
+spokesperson.campaign.list.button.create = Crear

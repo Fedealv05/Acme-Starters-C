@@ -32,18 +32,15 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 	@Override
 	public void authorise() {
 		boolean status;
-		int spokespersonId;
 
-		spokespersonId = super.getRequest().getPrincipal().getActiveRealm().getId();
-
-		status = this.campaign != null && this.campaign.getSpokesperson().getId() == spokespersonId;
+		status = this.campaign != null && this.campaign.getSpokesperson().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "effort");
+		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "effort", "draftMode");
 
 		super.unbindGlobal("spokespersonId", this.campaign.getSpokesperson().getId());
 	}

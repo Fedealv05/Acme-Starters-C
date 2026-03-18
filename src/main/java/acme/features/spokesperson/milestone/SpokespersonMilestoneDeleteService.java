@@ -11,7 +11,7 @@ import acme.entities.campaigns.Milestone;
 import acme.realms.Spokesperson;
 
 @Service
-public class SpokespersonMilestoneShowService extends AbstractService<Spokesperson, Milestone> {
+public class SpokespersonMilestoneDeleteService extends AbstractService<Spokesperson, Milestone> {
 
 	@Autowired
 	private SpokespersonMilestoneRepository	repository;
@@ -21,8 +21,8 @@ public class SpokespersonMilestoneShowService extends AbstractService<Spokespers
 
 	@Override
 	public void load() {
-
 		int id;
+
 		id = super.getRequest().getData("id", int.class);
 		this.milestone = this.repository.findMilestoneById(id);
 	}
@@ -30,15 +30,35 @@ public class SpokespersonMilestoneShowService extends AbstractService<Spokespers
 	@Override
 	public void authorise() {
 		boolean status;
-		status = this.milestone != null && this.milestone.getCampaign().getSpokesperson().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		if (this.milestone != null) {
+			boolean createdByThePrincipal;
+			createdByThePrincipal = this.milestone.getCampaign().getSpokesperson().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+
+			status = createdByThePrincipal && this.milestone.getCampaign().getDraftMode();
+		} else
+			status = false;
+
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.delete(this.milestone);
+	}
+	@Override
+	public void validate() {
+		super.validateObject(this.milestone);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.milestone, "title", "achievements", "effort", "kind");
 	}
 
 	@Override
 	public void unbind() {
 		super.unbindObject(this.milestone, "title", "achievements", "effort", "kind");
-		super.unbindGlobal("draftMode", this.milestone.getCampaign().getDraftMode());
-		super.unbindGlobal("campaignId", this.milestone.getCampaign().getId());
+		super.unbindGlobal("campaignId", this.milestone.getCampaign().getDraftMode());
 		SelectChoices kinds = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
 		super.unbindGlobal("kinds", kinds);
 	}

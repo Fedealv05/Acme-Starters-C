@@ -9,3 +9,7 @@
 <acme:list-column code="spokesperson.milestone.list.label.kind" path="kind" width="20%" />
 
 </acme:list>
+
+<jstl:if test="${draftMode == true}">
+<acme:button code="spokesperson.milestone.list.button.create" action="/spokesperson/milestone/create?campaignId=${campaignId}"/>
+</jstl:if>
