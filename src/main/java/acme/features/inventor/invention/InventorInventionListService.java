@@ -28,7 +28,7 @@ public class InventorInventionListService extends AbstractService<Inventor, Inve
 	}
 
 	@Override
-	public void authorise() { //Preguntar
+	public void authorise() {
 		boolean status = this.inventions.stream().map(i -> i.getInventor().getId()).allMatch(i -> i == super.getRequest().getPrincipal().getActiveRealm().getId());
 		;
 		super.setAuthorised(status);

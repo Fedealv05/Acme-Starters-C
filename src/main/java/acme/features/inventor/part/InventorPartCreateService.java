@@ -44,13 +44,16 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 
 		method = super.getRequest().getMethod();
 
-		if (method.equals("GET"))
-			status = true;
-		else {
+		if (this.invention != null) {
+			if (method.equals("GET"))
+				status = true;
+			else {
 
-			inventionCreatedByPrincipal = this.part.getInvention().getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
-			status = this.part.getInvention().getDraftMode() && inventionCreatedByPrincipal;
-		}
+				inventionCreatedByPrincipal = this.part.getInvention().getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+				status = this.part.getInvention().getDraftMode() && inventionCreatedByPrincipal;
+			}
+		} else
+			status = false;
 		super.setAuthorised(status);
 	}
 
