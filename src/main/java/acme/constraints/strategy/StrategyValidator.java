@@ -1,8 +1,6 @@
 
 package acme.constraints.strategy;
 
-import java.util.Date;
-
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,24 +50,10 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 			}
 
 			if (strategy.getDraftMode() != null && !strategy.getDraftMode()) {
+				long count = this.tacticRepository.countByStrategyId(strategy.getId());
+				boolean validTactics = count > 0;
 
-				{
-					long count = this.tacticRepository.countByStrategyId(strategy.getId());
-					boolean validTactics = count > 0;
-
-					super.state(context, validTactics, "draftMode", "acme.validation.strategy.tactics.message");
-				}
-
-//				{
-//					boolean validFutureStart = true;
-//					if (strategy.getStartMoment() != null) {
-//						Date now = new Date(System.currentTimeMillis() - 60000);
-//						validFutureStart = strategy.getStartMoment().after(now);
-//					}
-//
-//					super.state(context, validFutureStart, "startMoment", "acme.validation.strategy.startMoment.future.message");
-//				}
-				//esto va en el Servicio
+				super.state(context, validTactics, "draftMode", "acme.validation.strategy.tactics.message");
 			}
 
 			result = !super.hasErrors(context);

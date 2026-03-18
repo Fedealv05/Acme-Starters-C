@@ -30,11 +30,14 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 	@Override
 	public void authorise() {
 		boolean status;
-		boolean createdByThePrincipal;
 
-		createdByThePrincipal = this.strategy.getFundraiser().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		if (this.strategy != null) {
+			boolean createdByThePrincipal = this.strategy.getFundraiser().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
 
-		status = createdByThePrincipal && this.strategy.getDraftMode();
+			status = createdByThePrincipal && this.strategy.getDraftMode();
+
+		} else
+			status = false;
 
 		super.setAuthorised(status);
 	}
@@ -47,13 +50,6 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 	@Override
 	public void validate() {
 		super.validateObject(this.strategy);
-
-		// OPCIONAL:
-		/*
-		 * boolean hasAtLeastOneTactic;
-		 * hasAtLeastOneTactic = !this.repository.findTacticsByStrategyId(this.strategy.getId()).isEmpty();
-		 * super.state(hasAtLeastOneTactic, "*", "fundraiser.strategy.publish.validation.hasAtLeastOneTactic");
-		 */
 
 		if (this.strategy.getStartMoment() != null) {
 			boolean validStartMoment;

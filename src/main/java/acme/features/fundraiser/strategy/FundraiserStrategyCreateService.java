@@ -31,16 +31,7 @@ public class FundraiserStrategyCreateService extends AbstractService<Fundraiser,
 
 	@Override
 	public void authorise() {
-		boolean status;
-		String method;
-
-		method = super.getRequest().getMethod();
-
-		if (method.equals("GET"))
-			status = true;
-		else
-			status = true;
-
+		boolean status = true;
 		super.setAuthorised(status);
 	}
 

@@ -20,3 +20,7 @@ fundraiser.tactic.list.label.expectedPercentage = Expected Percentage
 fundraiser.tactic.list.title = Tactics
 fundraiser.tactic.list.button.create = Create tactic
 fundraiser.tactic.list.button.return = Return to strategy
+
+# Validations ############################################
+acme.validation.header.message = This field must not be blank and must be up to 75 characters long.
+acme.validation.text.message = This field must not be blank and must be up to 255 characters long.

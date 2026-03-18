@@ -27,11 +27,12 @@ public class FundraiserStrategyUpdateService extends AbstractService<Fundraiser,
 	@Override
 	public void authorise() {
 		boolean status;
-		boolean createdByThePrincipal;
 
-		createdByThePrincipal = this.strategy.getFundraiser().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
-
-		status = createdByThePrincipal && this.strategy.getDraftMode();
+		if (this.strategy != null) {
+			boolean createdByThePrincipal = this.strategy.getFundraiser().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+			status = createdByThePrincipal && this.strategy.getDraftMode();
+		} else
+			status = false;
 
 		super.setAuthorised(status);
 	}

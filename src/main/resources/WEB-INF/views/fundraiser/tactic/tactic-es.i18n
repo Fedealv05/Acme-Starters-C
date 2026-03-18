@@ -20,3 +20,9 @@ fundraiser.tactic.list.label.expectedPercentage = Porcentaje esperado
 fundraiser.tactic.list.title = Tácticas
 fundraiser.tactic.list.button.create = Crear táctica
 fundraiser.tactic.list.button.return = Volver a la estrategia
+
+
+# Validations ############################################
+# Validations
+acme.validation.header.message = Este campo no puede estar en blanco y debe tener un máximo de 75 caracteres.
+acme.validation.text.message = Este campo no puede estar en blanco y debe tener un máximo de 255 caracteres.
