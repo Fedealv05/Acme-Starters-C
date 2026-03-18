@@ -17,9 +17,16 @@ acme.validation.strategy.timeInterval.message = La fecha final debe ser posterio
 acme.validation.strategy.duplicated-ticker.message = Ya existe una estrategia con este ticker
 acme.validation.strategy.tactics.message = No puedes publicar una estrategia que no tenga al menos una táctica
 
-acme.validation.moneyWithCurrency.isEur.message 	= El dinero debe estar en EUR
 
 acme.validation.sponsorship.duplicated-ticker.message 	= Ya existe un patrocinio con este ticker
 acme.validation.sponsorship.timeInterval.message 		= La fecha final debe ser posterior a la fecha inicial
 sponsorship.publish.validation.hasAtLeastOneDonation  			= No puedes publicar un patrocinio que no tenga al menos una donación
+
+acme.validation.moneyWithCurrency.isEur.message = La única divisa aceptada es EUR
+acme.valid.invention.duplicated-ticker.message = Ya existe una invención con este ticker
+acme.validation.invention.timeInterval.message = La fecha final debe ser posterior a la fecha inicial
+acme.validation.invention.parts.message = No puedes publicar una invención que no tenga al menos una parte
+invention.publish.validation.hasAtLeastOnePart = No puedes publicar una invención que no tenga al menos una parte
+invention.publish.validation.validStartMoment = El momento de inicio debe ser después del momento de publicación
+invention.publish.validation.validEndMoment = El momento de fin debe ser después del momento de publicación
 
