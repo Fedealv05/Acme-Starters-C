@@ -17,5 +17,13 @@ acme.validation.strategy.duplicated-ticker.message 	= A strategy with this ticke
 acme.validation.strategy.timeInterval.message 		= The end date must be strictly after the start date
 acme.validation.strategy.tactics.message 			= You cannot publish a strategy that does not have at least one tactic
 
+acme.validation.moneyWithCurrency.isEur.message = The only allowed currency is EUR
+acme.valid.invention.duplicated-ticker.message = An invention with this ticker already exists
+acme.validation.invention.timeInterval.message = The end date must be strictly after the start date
+acme.validation.invention.parts.message = You cannot publish an invention that does not have at least one part
+invention.publish.validation.hasAtLeastOnePart = You cannot publish an invention that does not have at least one part
+invention.publish.validation.validStartMoment = The start moment must be after the publishing time
+invention.publish.validation.validEndMoment = The start moment must be after the publishing time
+
 
 
