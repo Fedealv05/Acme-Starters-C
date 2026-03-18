@@ -48,10 +48,13 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 
 				super.state(context, validTimeInterval, "*", "acme.validation.strategy.timeInterval.message");
 			}
+			boolean validTactics;
+			if (strategy.getDraftMode())
+				validTactics = true;
 
-			if (strategy.getDraftMode() != null && !strategy.getDraftMode()) {
+			else {
 				long count = this.tacticRepository.countByStrategyId(strategy.getId());
-				boolean validTactics = count > 0;
+				validTactics = count > 0;
 
 				super.state(context, validTactics, "draftMode", "acme.validation.strategy.tactics.message");
 			}

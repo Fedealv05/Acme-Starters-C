@@ -24,24 +24,19 @@ fundraiser.strategy.list.label.ticker = Ticker
 fundraiser.strategy.list.label.name = Name
 fundraiser.strategy.list.label.startMoment = Start Moment
 fundraiser.strategy.list.label.endMoment = End Moment
+fundraiser.strategy.list.button.create = Create
+
 
 fundraiser.strategy.list.title = My Strategies
 fundraiser.strategy.form.title = Strategy Details
-fundraiser.strategy.list.button.create = Create
+fundraiser.strategy.form.button.create = Create
 
 
 #Strategy Validations #######################################################
 
-acme.validation.strategy.timeInterval.message = The end date must be strictly after the start date.
-acme.validation.strategy.duplicated-ticker.message = A strategy with this ticker already exists.
-acme.validation.ticker.message = The ticker must be between 5 and 15 characters long and contain only alphanumeric characters, hyphens, or underscores.
-acme.validation.header.message = This field must not be blank and must be up to 75 characters long.
-acme.validation.text.message = This field must not be blank and must be up to 255 characters long.
-acme.validation.strategy.tactics.message = You cannot publish a strategy that does not have at least one tactic.
+fundraiser.strategy.publish.validation.validStartMoment = The start date must be strictly after the current date
+fundraiser.strategy.publish.validation.validEndMoment = The end date must be strictly after the current date
 
-fundraiser.strategy.publish.validation.validStartMoment = The start date must be strictly after the current date.
-fundraiser.strategy.publish.validation.validEndMoment = The end date must be strictly after the current date.
-
-fundraiser.strategy.form.error.duplicated-ticker = A strategy with this ticker already exists.
+fundraiser.strategy.form.error.duplicated-ticker = A strategy with this ticker already exists
 
 

@@ -24,22 +24,17 @@ fundraiser.strategy.list.label.ticker = Código
 fundraiser.strategy.list.label.name = Nombre
 fundraiser.strategy.list.label.startMoment = Momento de inicio
 fundraiser.strategy.list.label.endMoment = Momento de fin
+fundraiser.strategy.list.button.create = Crear
+
 
 fundraiser.strategy.list.title = Mis Estrategias
 fundraiser.strategy.form.title = Detalles de la Estrategia
-fundraiser.strategy.list.button.create = Crear
+fundraiser.strategy.form.button.create = Crear
 
 
 #Strategy Validations #######################################################
 
-acme.validation.strategy.timeInterval.message = La fecha final debe ser posterior a la fecha inicial.
-acme.validation.strategy.duplicated-ticker.message = Ya existe una estrategia con este ticker.
-acme.validation.ticker.message = El ticker debe tener entre 5 y 15 caracteres y contener solo letras, números, guiones o guiones bajos.
-acme.validation.header.message = Este campo no puede estar en blanco y debe tener un máximo de 75 caracteres.
-acme.validation.text.message = Este campo no puede estar en blanco y debe tener un máximo de 255 caracteres.
-acme.validation.strategy.tactics.message = No puedes publicar una estrategia que no tenga al menos una táctica.
+fundraiser.strategy.publish.validation.validStartMoment = La fecha de inicio debe ser posterior a la fecha actual
+fundraiser.strategy.publish.validation.validEndMoment = La fecha final debe ser posterior a la fecha actual
 
-fundraiser.strategy.publish.validation.validStartMoment = La fecha de inicio debe ser posterior a la fecha actual.
-fundraiser.strategy.publish.validation.validEndMoment = La fecha final debe ser posterior a la fecha actual.
-
-fundraiser.strategy.form.error.duplicated-ticker = Ya existe una estrategia con este ticker.
+fundraiser.strategy.form.error.duplicated-ticker = Ya existe una estrategia con este ticker
