@@ -66,13 +66,13 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	public void validate() {
 
 		super.validateObject(this.part);
+		if (this.part.getKind() != null) {
+			PartKind kind;
+			kind = this.part.getKind();
+			boolean validKind = kind.equals(PartKind.CORE) || kind.equals(PartKind.MANDATORY) || kind.equals(PartKind.OPTIONAL);
 
-		PartKind kind;
-		kind = this.part.getKind();
-		boolean validKind = kind.equals(PartKind.CORE) || kind.equals(PartKind.MANDATORY) || kind.equals(PartKind.OPTIONAL);
-
-		super.state(validKind, "kind", "part.create.validation.validKind");
-
+			super.state(validKind, "kind", "part.create.validation.validKind");
+		}
 	}
 
 	@Override
