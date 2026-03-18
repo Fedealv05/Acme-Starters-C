@@ -51,6 +51,8 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
+master.menu.user-account.become-spokesperson = Become a spokesperson
+master.menu.user-account.spokesperson-profile = Spokesperson profile
 
 master.menu.user-account.become-inventor= Become an inventor
 master.menu.user-account.inventor-profile= Inventor profile
@@ -64,7 +66,7 @@ master.menu.user-account.sponsor-profile= Sponsor profile
 # master.menu.campaign ##########################################################
 
 master.menu.campaign= Campaigns
-master.menu.campaign.list = Campaign list
+master.menu.campaign.list = Campaigns
 master.menu.spokesperson= Spokesperson
 master.menu.spokesperson.campaign.list = My campaigns
 
