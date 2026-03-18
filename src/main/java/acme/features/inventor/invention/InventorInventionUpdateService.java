@@ -27,12 +27,16 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 
 	@Override
 	public void authorise() {
-		boolean status;
+		boolean status = true;
 
-		boolean createdByThePrincipal;
-		createdByThePrincipal = this.invention.getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		if (this.invention != null) {
 
-		status = this.invention != null && createdByThePrincipal && this.invention.getDraftMode();
+			boolean createdByThePrincipal;
+			createdByThePrincipal = this.invention.getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+
+			status = createdByThePrincipal && this.invention.getDraftMode();
+		} else
+			status = false;
 
 		super.setAuthorised(status);
 	}
