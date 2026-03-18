@@ -17,5 +17,11 @@ acme.validation.strategy.duplicated-ticker.message 	= A strategy with this ticke
 acme.validation.strategy.timeInterval.message 		= The end date must be strictly after the start date
 acme.validation.strategy.tactics.message 			= You cannot publish a strategy that does not have at least one tactic
 
+acme.validation.moneyWithCurrency.isEur.message 	= The money must be in EUR
+
+acme.validation.sponsorship.duplicated-ticker.message 	= A sponsorship with this ticker already exists
+acme.validation.sponsorship.timeInterval.message 		= The end date must be strictly after the start date
+ sponsorship.publish.validation.hasAtLeastOneDonation 			= You cannot publish a sponsorship that does not have at least one tactic
+
 
 

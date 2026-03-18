@@ -17,3 +17,9 @@ acme.validation.strategy.timeInterval.message = La fecha final debe ser posterio
 acme.validation.strategy.duplicated-ticker.message = Ya existe una estrategia con este ticker
 acme.validation.strategy.tactics.message = No puedes publicar una estrategia que no tenga al menos una táctica
 
+acme.validation.moneyWithCurrency.isEur.message 	= El dinero debe estar en EUR
+
+acme.validation.sponsorship.duplicated-ticker.message 	= Ya existe un patrocinio con este ticker
+acme.validation.sponsorship.timeInterval.message 		= La fecha final debe ser posterior a la fecha inicial
+sponsorship.publish.validation.hasAtLeastOneDonation  			= No puedes publicar un patrocinio que no tenga al menos una donación
+
