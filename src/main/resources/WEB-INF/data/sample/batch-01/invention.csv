@@ -1,28 +1,28 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:inventor
-invention-022,ABC-1001,Generador Cuántico,Un dispositivo que genera energía limpia e inagotable a partir del vacío cuántico.,2027/05/10 10:00,2028/05/10 10:00,https://acme.com/inv1,true,inventor-01
-invention-023,RBT-2002,EcoRecolector,Dron terrestre autónomo para la recolección y clasificación de residuos sólidos en entornos urbanos.,2027/06/15 12:30,2029/01/20 09:00,"",true,inventor-02
-invention-024,AID-3003,Silla Pensante,Silla ergonómica que mediante inteligencia artificial corrige la postura y ajusta su temperatura.,2027/08/01 08:00,2027/12/31 18:00,https://acme.com/inv3,true,inventor-01
-invention-001,A-B_1,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-01
-invention-002,AB-123,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-02
-invention-003,MAX-LENGTH-123,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-02
-invention-004,MAX-LENGTH-1234,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-01
-invention-005,BASE-TICK-01,N,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-02
-invention-006,BASE-TICK-02,Na,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
-invention-007,BASE-TICK-03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod te",This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
-invention-008,BASE-TICK-04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tem",This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
-invention-009,BASE-TICK-05,Base Invention Name,D,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
-invention-010,BASE-TICK-06,Base Invention Name,De,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
-invention-011,BASE-TICK-07,Base Invention Name,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
-invention-012,BASE-TICK-08,Base Invention Name,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.",2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
-invention-013,BASE-TICK-09,Base Invention Name,This is a standard base description for testing.,2026/02/24 00:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
-invention-014,BASE-TICK-010,Base Invention Name,This is a standard base description for testing.,2099/12/31 23:58,2099/12/31 23:59,http://example.com/base,true,inventor-02
-invention-015,BASE-TICK-012,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/01/01 10:01,http://example.com/base,true,inventor-02
-invention-016,BASE-TICK-012-B,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2100/01/01 00:00,http://example.com/base,true,inventor-01
-invention-017,BASE-TICK-013,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,,true,inventor-02
-invention-018,BASE-TICK-014,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://a.b,true,inventor-01
-invention-019,BASE-TICK-015,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.org/a/b?a&b,true,inventor-01
-invention-020,BASE-TICK-016,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
-invention-021,BASE-TICK-017,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
-invention-026,BASE-TICK-026,Base Invention Name,This is a standard base description for testing.,2025/01/01 00:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
-invention-027,BASE-TICK-027,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2200/12/31 23:59,http://example.com/base,true,inventor-02
-invention-030,BASE-TICK-030,Probar Publicacion,This is a standard base description for testing.,2027/01/01 10:00,2200/12/31 23:59,http://example.com/base,true,inventor-01
+invention-022,EF12-_________,Generador Cuántico,Un dispositivo que genera energía limpia e inagotable a partir del vacío cuántico.,2027/05/10 10:00,2028/05/10 10:00,https://acme.com/inv1,true,inventor-01
+invention-023,GH34-aB_12cdE3,EcoRecolector,Dron terrestre autónomo para la recolección y clasificación de residuos sólidos en entornos urbanos.,2027/06/15 12:30,2029/01/20 09:00,"",true,inventor-02
+invention-024,IJ56-Z_9_a_B_c,Silla Pensante,Silla ergonómica que mediante inteligencia artificial corrige la postura y ajusta su temperatura.,2027/08/01 08:00,2027/12/31 18:00,https://acme.com/inv3,true,inventor-01
+invention-001,KL78-0_a_B_c_D,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-01
+invention-002,YZ12-0_a_B_c_D_,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-02
+invention-003,YZ56-AAAAAAAAA,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-02
+invention-004,AB78-zzzzzzzzz,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-01
+invention-005,CD90-123456789,N,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,false,inventor-02
+invention-006,AA00-AAAAA,Na,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
+invention-007,ZZ99-zzzzz,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod te",This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
+invention-008,MN90-AAAAAAAAAA,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tem",This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
+invention-009,CD34-_____,Base Invention Name,D,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
+invention-010,EF56-aB3_c,Base Invention Name,De,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
+invention-011,GH78-A1_b2,Base Invention Name,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
+invention-012,IJ90-Z_9_a,Base Invention Name,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.",2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
+invention-013,KL12-AAAAAA,Base Invention Name,This is a standard base description for testing.,2026/02/24 00:00,2027/12/31 10:00,http://example.com/base,true,inventor-01
+invention-014,MN34-zzzzzz,Base Invention Name,This is a standard base description for testing.,2099/12/31 23:58,2099/12/31 23:59,http://example.com/base,true,inventor-02
+invention-015,OP56-123456,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/01/01 10:01,http://example.com/base,true,inventor-02
+invention-016,QR78-______,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2100/01/01 00:00,http://example.com/base,true,inventor-01
+invention-017,ST90-aB_12c,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,,true,inventor-02
+invention-018,UV12-X_y_Z9,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://a.b,true,inventor-01
+invention-019,WX34-0_a_B_,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.org/a/b?a&b,true,inventor-01
+invention-020,OP12-zzzzzzzzzz,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
+invention-021,QR34-0123456789,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
+invention-026,ST56-__________,Base Invention Name,This is a standard base description for testing.,2025/01/01 00:00,2027/12/31 10:00,http://example.com/base,true,inventor-02
+invention-027,UV78-aB_12cdE3f,Base Invention Name,This is a standard base description for testing.,2027/01/01 10:00,2200/12/31 23:59,http://example.com/base,true,inventor-02
+invention-030,WX90-Z_9_a_B_c_,Probar Publicacion,This is a standard base description for testing.,2027/01/01 10:00,2200/12/31 23:59,http://example.com/base,true,inventor-01
