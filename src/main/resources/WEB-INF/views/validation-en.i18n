@@ -28,7 +28,14 @@ acme.validation.invention.parts.message = You cannot publish an invention that d
 invention.publish.validation.hasAtLeastOnePart = You cannot publish an invention that does not have at least one part
 invention.publish.validation.validStartMoment = The start moment must be after the publishing time
 invention.publish.validation.validEndMoment = The start moment must be after the publishing time
-
 acme.validation.sponsorship.invalid-interval.message = Invalid time interval
+acme.valid.campaign.duplicated-ticker.message = A campaign with this ticker already exists
+acme.validation.campaign.timeInterval.message = The end date must be strictly after the start date
+acme.validation.campaign.milestones.message = You cannot publish a campaign that does not have at least one milestone
+campaign.publish.validation.hasAtLeastOneMilestone = You cannot publish a campaign that does not have at least one milestone
+campaign.publish.validation.validStartMoment = The start moment must be after the publishing time
+campaign.publish.validation.validEndMoment = The end moment must be after the publishing time
+
+
 
 
