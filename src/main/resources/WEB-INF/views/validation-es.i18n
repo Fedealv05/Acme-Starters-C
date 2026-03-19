@@ -30,3 +30,9 @@ invention.publish.validation.hasAtLeastOnePart = No puedes publicar una invenci�
 invention.publish.validation.validStartMoment = El momento de inicio debe ser después del momento de publicación
 invention.publish.validation.validEndMoment = El momento de fin debe ser después del momento de publicación
 
+acme.valid.campaign.duplicated-ticker.message = Ya existe una campaña con este ticker
+acme.validation.campaign.timeInterval.message = La fecha final debe ser posterior a la fecha inicial
+acme.validation.campaign.milestones.message = No puedes publicar una campaña que no tenga al menos un hito
+campaign.publish.validation.hasAtLeastOneMilestone = No puedes publicar una campaña que no tenga al menos un hito
+campaign.publish.validation.validStartMoment = El momento de inicio debe ser después del momento de publicación
+campaign.publish.validation.validEndMoment = El momento de fin debe ser después del momento de publicación

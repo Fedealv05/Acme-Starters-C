@@ -1,19 +1,19 @@
 key,key:spokesPerson,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
 campaign-01,spokesperson-01,F,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-02,spokesperson-01,FIN:001,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-03,spokesperson-01,FIN-,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-04,spokesperson-01,FIN-00112321323123123131,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-02,spokesperson-01,FI26:FIN001,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-03,spokesperson-01,FI26-,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-04,spokesperson-01,FI26-FIN001123213231,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
 campaign-05,spokesperson-01,null,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-06,spokesperson-01,FIN-002,null,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-07,spokesperson-01,FIN-003,,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-08,spokesperson-01,FIN-004,,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-09,spokesperson-01,FIN-005,Banca Segura 2026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-10,spokesperson-01,FIN-006,Banca Segura 2026,EEEEEEEEste es un texto de prueba diseñado para alcanzar exactamente los doscientos cincuenta y cinco caracteres de longitud total sin utilizar ningun tipo de tildes o caracteres especiales que puedan dar problemas en la validacion de campos de texto de Java.Ok.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-11,spokesperson-01,FIN-007,Banca Segura 2026,,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-12,spokesperson-01,FIN-008,Banca Segura 2026,null,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-13,spokesperson-01,FIN-009,Banca Segura 2026,,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-14,spokesperson-01,FIN-010,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,1500/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
-campaign-15,spokesperson-01,FIN-011,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2201/01/01 00:00,https://www.bancasegura.com,true
-campaign-16,spokesperson-01,FIN-012,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,ftp://www.bancasegura.com,true
-campaign-17,spokesperson-01,FIN-013,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,mailto:a@a.com,true 
-campaign-18,spokesperson-01,FIN-014,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://google.com:8080,true
+campaign-06,spokesperson-01,FI26-FIN002,null,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-07,spokesperson-01,FI26-FIN003,,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-08,spokesperson-01,FI26-FIN004,,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-09,spokesperson-01,FI26-FIN005,Banca Segura 2026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-10,spokesperson-01,FI26-FIN006,Banca Segura 2026,EEEEEEEEste es un texto de prueba diseñado para alcanzar exactamente los doscientos cincuenta y cinco caracteres de longitud total sin utilizar ningun tipo de tildes o caracteres especiales que puedan dar problemas en la validacion de campos de texto de Java.Ok.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-11,spokesperson-01,FI26-FIN007,Banca Segura 2026,,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-12,spokesperson-01,FI26-FIN008,Banca Segura 2026,null,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-13,spokesperson-01,FI26-FIN009,Banca Segura 2026,,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-14,spokesperson-01,FI26-FIN010,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,1500/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
+campaign-15,spokesperson-01,FI26-FIN011,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2201/01/01 00:00,https://www.bancasegura.com,true
+campaign-16,spokesperson-01,FI26-FIN012,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,ftp://www.bancasegura.com,true
+campaign-17,spokesperson-01,FI26-FIN013,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,mailto:a@a.com,true 
+campaign-18,spokesperson-01,FI26-FIN014,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://google.com:8080,true
