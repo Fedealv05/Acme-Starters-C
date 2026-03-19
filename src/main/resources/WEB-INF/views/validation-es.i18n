@@ -30,3 +30,4 @@ invention.publish.validation.hasAtLeastOnePart = No puedes publicar una invenci�
 invention.publish.validation.validStartMoment = El momento de inicio debe ser después del momento de publicación
 invention.publish.validation.validEndMoment = El momento de fin debe ser después del momento de publicación
 
+acme.validation.sponsorship.invalid-interval.message = Intervalo de tiempo no válido
