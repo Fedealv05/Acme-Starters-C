@@ -30,9 +30,11 @@ public class FundraiserTacticShowService extends AbstractService<Fundraiser, Tac
 	@Override
 	public void authorise() {
 		boolean status;
-		int fundraiserId;
-		fundraiserId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.tactic != null && this.tactic.getStrategy().getFundraiser().getId() == fundraiserId;
+
+		if (this.tactic != null && this.tactic.getStrategy() != null)
+			status = this.tactic.getStrategy().getFundraiser().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		else
+			status = false;
 
 		super.setAuthorised(status);
 	}

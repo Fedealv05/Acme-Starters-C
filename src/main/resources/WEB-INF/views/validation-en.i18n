@@ -17,5 +17,7 @@ acme.validation.strategy.duplicated-ticker.message 	= A strategy with this ticke
 acme.validation.strategy.timeInterval.message 		= The end date must be strictly after the start date
 acme.validation.strategy.tactics.message 			= You cannot publish a strategy that does not have at least one tactic
 
+acme.validation.tactic.percentage.message = The sum of the expected percentages of all tactics cannot exceed 100%
+
 
 
