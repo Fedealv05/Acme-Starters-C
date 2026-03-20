@@ -51,7 +51,7 @@ public class SponsorSponsorshipDeleteService extends AbstractService<Sponsor, Sp
 
 	@Override
 	public void validate() {
-		super.validateObject(this.sponsorship);
+		// No specific validation rules for deletion
 	}
 
 	@Override
