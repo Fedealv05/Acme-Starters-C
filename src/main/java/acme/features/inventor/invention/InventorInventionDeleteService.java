@@ -62,7 +62,6 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 	}
 	@Override
 	public void validate() {
-		super.validateObject(this.invention);
 	}
 
 	@Override

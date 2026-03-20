@@ -38,12 +38,17 @@ public class SpokespersonMilestoneCreateService extends AbstractService<Spokespe
 	@Override
 	public void authorise() {
 		boolean status;
-		int spokespersonId, campaignId;
-		Campaign c;
-		campaignId = super.getRequest().getData("campaignId", int.class);
-		c = this.campaignRepository.findCampaignById(campaignId);
-		spokespersonId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = c != null && c.getId() == campaignId && c.getSpokesperson().getId() == spokespersonId && c.getDraftMode();
+		String method;
+		boolean campaingCreatedByPrincipal;
+
+		method = super.getRequest().getMethod();
+
+		if (this.campaign != null) {
+			campaingCreatedByPrincipal = this.campaign.getSpokesperson().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+
+			status = this.campaign.getDraftMode() && campaingCreatedByPrincipal;
+		} else
+			status = false;
 		super.setAuthorised(status);
 	}
 

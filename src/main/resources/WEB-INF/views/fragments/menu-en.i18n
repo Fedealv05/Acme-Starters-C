@@ -13,6 +13,8 @@
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
 
+master.menu.any = Any
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
