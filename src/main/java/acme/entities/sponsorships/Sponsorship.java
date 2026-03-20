@@ -84,6 +84,7 @@ public class Sponsorship extends AbstractEntity {
 	// Derived attributes (Methods) -------------------------------------------
 
 
+	@Mandatory
 	@Transient
 	@Valid
 	public Double getMonthsActive() {
@@ -96,6 +97,7 @@ public class Sponsorship extends AbstractEntity {
 		return result;
 	}
 
+	@Mandatory
 	@Transient
 	@ValidMoneyWithCurrency(min = 0, max = 1000000000)
 	public Money getTotalMoney() {
