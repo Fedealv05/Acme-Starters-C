@@ -38,7 +38,7 @@ public class AnyMilestoneListService extends AbstractService<Any, Milestone> {
 	@Override
 	public void authorise() {
 		boolean status;
-		status = this.campaign != null && this.milestones.stream().allMatch(i -> i.getCampaign().getDraftMode() == false);
+		status = this.campaign != null && !this.campaign.getDraftMode() && this.milestones.stream().allMatch(i -> i.getCampaign().getDraftMode() == false);
 		super.setAuthorised(status);
 	}
 
