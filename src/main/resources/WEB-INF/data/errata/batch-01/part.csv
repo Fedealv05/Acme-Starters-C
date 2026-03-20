@@ -1,5 +1,5 @@
 key,name,description,cost,kind,key:invention
-err-part-001,"",Valid Part Description,EUR 10.00,CORE,err-inv-001
+err-part-001,czxc,Valid Part Description,XXX 10.00,CORE,err-inv-001
 err-part-002,,Valid Part Description,EUR 10.00,CORE,err-inv-001
 err-part-003,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Valid Part Description,EUR 10.00,CORE,err-inv-001
 err-part-004,Valid Part Name,"",EUR 10.00,CORE,err-inv-001
@@ -7,6 +7,6 @@ err-part-005,Valid Part Name,,EUR 10.00,CORE,err-inv-001
 err-part-006,Valid Part Name,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,EUR 10.00,CORE,err-inv-001
 err-part-007,Valid Part Name,Valid Part Description,"",CORE,err-inv-001
 err-part-008,Valid Part Name,Valid Part Description,EUR -0.01,CORE,err-inv-001
-err-part-009,Valid Part Name,Valid Part Description,EUR 1000000.01,CORE,err-inv-001
+err-part-009,Valid Part Name,Valid Part Description,EUR 1000000000.01,CORE,err-inv-001
 err-part-011,Valid Part Name,Valid Part Description,EUR 10.00,"",err-inv-001
 err-part-013,Valid Part Name,Valid Part Description,EUR 10.00,CORE,""

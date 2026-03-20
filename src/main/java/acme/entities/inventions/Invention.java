@@ -82,8 +82,9 @@ public class Invention extends AbstractEntity {
 	private Inventor			inventor;
 
 
-	@Transient
+	@Mandatory
 	@Valid
+	@Transient
 	public Double getMonthsActive() {
 		double result = 0.0;
 		if (this.startMoment != null && this.endMoment != null) {
@@ -94,8 +95,9 @@ public class Invention extends AbstractEntity {
 		return result;
 	}
 
-	@Transient
+	@Mandatory
 	@ValidMoneyWithCurrency(min = 0, max = 1000000000)
+	@Transient
 	public Money getCost() {
 		Double sum = this.repository.sumPriceByInventionId(this.getId());
 		Money result = new Money();
