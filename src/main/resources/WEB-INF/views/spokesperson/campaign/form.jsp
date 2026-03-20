@@ -11,7 +11,7 @@
 <acme:form-moment code="spokesperson.campaign.form.label.startMoment" path="startMoment"/>
 <acme:form-moment code="spokesperson.campaign.form.label.endMoment" path="endMoment"/>
 
-<acme:form-double code="spokesperson.campaign.form.label.monthsActive" path="monthsActive" readonly="true"/>
+<acme:form-textbox code="spokesperson.campaign.form.label.monthsActive" path="monthsActive" readonly="true"/>
 <acme:form-double code="spokesperson.campaign.form.label.effort" path="effort" readonly="true"/>
 
 

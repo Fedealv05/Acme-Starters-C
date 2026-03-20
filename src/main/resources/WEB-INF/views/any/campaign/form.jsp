@@ -10,7 +10,7 @@
 <acme:form-textarea code="any.campaign.form.label.moreInfo" path="moreInfo"/>
 <acme:form-moment code="any.campaign.form.label.startMoment" path="startMoment"/>
 <acme:form-moment code="any.campaign.form.label.endMoment" path="endMoment"/>
-<acme:form-double code="any.campaign.form.label.monthsActive" path="monthsActive"/>
+<acme:form-textbox code="any.campaign.form.label.monthsActive" path="monthsActive"/>
 <acme:form-double code="any.campaign.form.label.effort" path="effort"/>
 
 <acme:button code="any.campaign.form.label.milestones" action="/any/milestone/list?campaignId=${id}"/>

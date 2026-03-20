@@ -81,8 +81,9 @@ public class Campaign extends AbstractEntity {
 	private Spokesperson		spokesperson;
 
 
-	@Transient
+	@Mandatory
 	@Valid
+	@Transient
 	public Double getMonthsActive() {
 		double result = 0.0;
 		if (this.startMoment != null && this.endMoment != null) {
@@ -93,10 +94,14 @@ public class Campaign extends AbstractEntity {
 		return result;
 	}
 
-	@Transient
+	@Mandatory
 	@ValidNumber(min = 0)
+	@Transient
 	public Double getEffort() {
-		return this.repository.findTotalEffortByCampaignId(this.getId());
+		Double res = this.repository.findTotalEffortByCampaignId(this.getId());
+		if (res == null)
+			res = 0.0;
+		return res;
 	}
 
 }

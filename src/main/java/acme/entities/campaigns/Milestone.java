@@ -33,7 +33,7 @@ public class Milestone extends AbstractEntity {
 	private String				achievements;
 
 	@Mandatory
-	@ValidNumber(min = 0, max = 100)
+	@ValidNumber(min = 0, max = 1000000)
 	@Column
 	private Double				effort;
 
@@ -43,6 +43,7 @@ public class Milestone extends AbstractEntity {
 	private MilestoneKind		kind;
 
 	@Mandatory
+	@Valid
 	@ManyToOne(optional = false)
 	private Campaign			campaign;
 
