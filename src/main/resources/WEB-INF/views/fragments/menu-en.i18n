@@ -13,6 +13,8 @@
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
 
+master.menu.any = Any
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -73,7 +75,7 @@ master.menu.spokesperson.campaign.list = My campaigns
 # master.menu.sponsorship ####################################################
 
 master.menu.sponsorship = Sponsorship
-master.menu.sponsorship.list = List sponsorships
+master.menu.sponsorship.list = Sponsorships
 master.menu.authsponsorship = Sponsorship
 master.menu.authsponsorship.list = My sponsorships
 

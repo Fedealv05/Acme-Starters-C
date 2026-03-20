@@ -1,15 +1,15 @@
 #Part Form #######################################################
 
-any.part.form.label.name = Nombre
-any.part.form.label.kind = Tipo
-any.part.form.label.description = Descripción
-any.part.form.label.cost = Coste
+inventor.part.form.label.name = Nombre
+inventor.part.form.label.kind = Tipo
+inventor.part.form.label.description = Descripción
+inventor.part.form.label.cost = Coste
 
 inventor.part.form.button.create = Crear
 inventor.part.form.button.update = Editar
 inventor.part.form.button.delete = Eliminar
 
-any.part.form.title = Parte
+inventor.part.form.title = Parte
 
 #Part List #######################################################
 

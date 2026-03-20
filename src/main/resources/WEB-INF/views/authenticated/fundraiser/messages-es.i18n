@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.inventor.form.title = Inventor form
+authenticated.inventor.form.title =Detalles del inventor
 
 authenticated.inventor.form.label.bio = Bio
 authenticated.inventor.form.label.keyWords = Palabras clave

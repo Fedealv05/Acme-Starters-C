@@ -35,7 +35,7 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRealm('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
-		<acme:menu-option code="master.menu.anonymous">
+		<acme:menu-option code="master.menu.any">
 			<acme:menu-suboption code="master.menu.invention" action="/any/invention/list"/>
 			<acme:menu-suboption code="master.menu.strategy" action="/any/strategy/list"/>
 			<acme:menu-suboption code="master.menu.sponsorship.list" action="/any/sponsorship/list"/>
