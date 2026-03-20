@@ -73,7 +73,7 @@ master.menu.spokesperson.campaign.list = My campaigns
 # master.menu.sponsorship ####################################################
 
 master.menu.sponsorship = Sponsorship
-master.menu.sponsorship.list = List sponsorships
+master.menu.sponsorship.list = Sponsorships
 master.menu.authsponsorship = Sponsorship
 master.menu.authsponsorship.list = My sponsorships
 
