@@ -10,3 +10,7 @@ key,name,notes,expectedPercentage,kind,key:strategy
 "tactic-009","Base Tactic Name","D",0.1,"AGGRESSIVE","strategy-003"
 "tactic-010","Base Tactic Name","De",40.0,"TENDER","strategy-001"
 "tactic-011","Base Tactic Name","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",33.3,"SUBTLE","strategy-002"
+"tactic-012","Pozos Solares","Instalación de bombas de extracción de agua impulsadas por energía solar.",60.0,"SUBTLE","strategy-025"
+"tactic-013","Filtros Comunitarios","Distribución de filtros de agua portátiles de alta capacidad.",40.0,"TENDER","strategy-025"
+"tactic-014","Apadrinamiento Escolar","Campaña masiva de apadrinamiento para cubrir la matrícula anual.",50.0,"AGGRESSIVE","strategy-026"
+"tactic-015","Material Didáctico","Envío de mochilas, libros y material escolar básico.",35.0,"SUBTLE","strategy-026"

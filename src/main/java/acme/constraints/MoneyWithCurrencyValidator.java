@@ -61,8 +61,10 @@ public class MoneyWithCurrencyValidator extends AbstractValidator<ValidMoneyWith
 				result = true;
 			else {
 				isEur = value.getCurrency().equals("EUR");
-				if (!isEur)
+				if (!isEur) {
+					result = false;
 					super.state(context, isEur, "*", "acme.validation.moneyWithCurrency.isEur.message");
+				}
 			}
 		}
 

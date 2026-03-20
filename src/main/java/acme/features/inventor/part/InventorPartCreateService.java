@@ -44,13 +44,16 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 
 		method = super.getRequest().getMethod();
 
-		if (method.equals("GET"))
-			status = true;
-		else {
+		if (this.invention != null) {
+			if (method.equals("GET"))
+				status = true;
+			else {
 
-			inventionCreatedByPrincipal = this.part.getInvention().getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
-			status = this.part.getInvention().getDraftMode() && inventionCreatedByPrincipal;
-		}
+				inventionCreatedByPrincipal = this.part.getInvention().getInventor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+				status = this.part.getInvention().getDraftMode() && inventionCreatedByPrincipal;
+			}
+		} else
+			status = false;
 		super.setAuthorised(status);
 	}
 
@@ -63,13 +66,13 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	public void validate() {
 
 		super.validateObject(this.part);
+		if (this.part.getKind() != null) {
+			PartKind kind;
+			kind = this.part.getKind();
+			boolean validKind = kind.equals(PartKind.CORE) || kind.equals(PartKind.MANDATORY) || kind.equals(PartKind.OPTIONAL);
 
-		PartKind kind;
-		kind = this.part.getKind();
-		boolean validKind = kind.equals(PartKind.CORE) || kind.equals(PartKind.MANDATORY) || kind.equals(PartKind.OPTIONAL);
-
-		super.state(validKind, "kind", "part.create.validation.validKind");
-
+			super.state(validKind, "kind", "part.create.validation.validKind");
+		}
 	}
 
 	@Override

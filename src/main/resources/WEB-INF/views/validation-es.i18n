@@ -11,11 +11,29 @@
 acme.validation.header.message  	= Debe tener entre 1 y 75 caracteres
 acme.validation.text.message   		= Debe tener entre 1 y 255 caracteres 
 acme.validation.phone.message       = Debe ser +código-país (código-área) número, donde sólo el número es obligatorio
-acme.validation.ticker.message		=El ticker debe tener entre 5 y 15 caracteres y contener solo letras, números, guiones o guiones bajos
-
+acme.validation.ticker.message = El ticker debe tener el formato XX99-YYYYY (2 letras mayúsculas, 2 números, un guion, y entre 5 y 10 caracteres alfanuméricos).
 acme.validation.strategy.timeInterval.message = La fecha final debe ser posterior a la fecha inicial
 acme.validation.strategy.duplicated-ticker.message = Ya existe una estrategia con este ticker
 acme.validation.strategy.tactics.message = No puedes publicar una estrategia que no tenga al menos una táctica
 
 acme.validation.tactic.percentage.message = La suma de los porcentajes de todas las tácticas no puede superar el 100%
+
+acme.validation.sponsorship.duplicated-ticker.message 	= Ya existe un patrocinio con este ticker
+acme.validation.sponsorship.timeInterval.message 		= La fecha final debe ser posterior a la fecha inicial
+sponsorship.publish.validation.hasAtLeastOneDonation  			= No puedes publicar un patrocinio que no tenga al menos una donación
+
+acme.validation.moneyWithCurrency.isEur.message = La única divisa aceptada es EUR
+acme.valid.invention.duplicated-ticker.message = Ya existe una invención con este ticker
+acme.validation.invention.timeInterval.message = La fecha final debe ser posterior a la fecha inicial
+acme.validation.invention.parts.message = No puedes publicar una invención que no tenga al menos una parte
+invention.publish.validation.hasAtLeastOnePart = No puedes publicar una invención que no tenga al menos una parte
+invention.publish.validation.validStartMoment = El momento de inicio debe ser después del momento de publicación
+invention.publish.validation.validEndMoment = El momento de fin debe ser después del momento de publicación
+acme.validation.sponsorship.invalid-interval.message = Intervalo de tiempo no válido
+acme.valid.campaign.duplicated-ticker.message = Ya existe una campaña con este ticker
+acme.validation.campaign.timeInterval.message = La fecha final debe ser posterior a la fecha inicial
+acme.validation.campaign.milestones.message = No puedes publicar una campaña que no tenga al menos un hito
+campaign.publish.validation.hasAtLeastOneMilestone = No puedes publicar una campaña que no tenga al menos un hito
+campaign.publish.validation.validStartMoment = El momento de inicio debe ser después del momento de publicación
+campaign.publish.validation.validEndMoment = El momento de fin debe ser después del momento de publicación
 

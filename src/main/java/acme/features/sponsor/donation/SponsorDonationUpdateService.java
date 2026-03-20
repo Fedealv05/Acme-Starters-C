@@ -29,12 +29,14 @@ public class SponsorDonationUpdateService extends AbstractService<Sponsor, Donat
 
 	@Override
 	public void authorise() {
-		boolean status;
-		boolean createdByThePrincipal;
+		boolean status = false;
 
-		createdByThePrincipal = this.donation.getSponsorship().getSponsor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		if (this.donation != null) {
+			boolean isOwner = this.donation.getSponsorship().getSponsor().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+			boolean isDraft = this.donation.getSponsorship().getDraftMode();
 
-		status = this.donation != null && createdByThePrincipal && this.donation.getSponsorship().getDraftMode();
+			status = isOwner && isDraft;
+		}
 
 		super.setAuthorised(status);
 	}

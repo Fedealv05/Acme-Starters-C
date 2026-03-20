@@ -51,6 +51,8 @@ master.menu.user-account.become-provider = Hacerse proveedor
 master.menu.user-account.provider-profile = Perfil de proveedor
 master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.consumer-profile = Perfil de consumidor
+master.menu.user-account.become-spokesperson = Hazte portavoz
+master.menu.user-account.spokesperson-profile = Perfil de portavoz
 
 master.menu.user-account.become-inventor= Hazte inventor
 master.menu.user-account.inventor-profile= Perfil de inventor
@@ -64,7 +66,7 @@ master.menu.user-account.sponsor-profile= Perfil de patrocinador
 # master.menu.campaign ##########################################################
 
 master.menu.campaign= Campañas
-master.menu.campaign.list = Lista de campañas
+master.menu.campaign.list = Campañas
 master.menu.spokesperson= Portavoz
 master.menu.spokesperson.campaign.list = Mis campañas
 

@@ -31,13 +31,13 @@ public class AnySpokespersonShowService extends AbstractService<Any, Spokesperso
 
 	@Override
 	public void authorise() {
-		boolean status = true;
+		boolean status = this.spokesperson != null;
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.spokesperson, "cv", "achievements", "licensed");
+		super.unbindObject(this.spokesperson, "cv", "achievements", "licensed", "userAccount.username");
 	}
 
 }

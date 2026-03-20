@@ -43,21 +43,21 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 			}
 			{
 				boolean validTimeInterval;
-				validTimeInterval = campaign.getStartMoment().before(campaign.getEndMoment());
+				validTimeInterval = campaign.getStartMoment() == null || campaign.getEndMoment() == null || campaign.getStartMoment().before(campaign.getEndMoment());
 
-				super.state(context, validTimeInterval, "*", "acme.validation.invention.timeInterval.message");
+				super.state(context, validTimeInterval, "*", "acme.validation.campaign.timeInterval.message");
 			}
 
 			{
-				boolean validParts;
+				boolean validMilestones;
 				if (campaign.getDraftMode())
-					validParts = true;
+					validMilestones = true;
 				else {
 					long count = this.milestoneRepository.countByCampaignId(campaign.getId());
-					validParts = count > 0;
+					validMilestones = count > 0;
 				}
 
-				super.state(context, validParts, "draftMode", "acme.validation.campaign.parts.message");
+				super.state(context, validMilestones, "draftMode", "acme.validation.campaign.milestones.message");
 			}
 			return !super.hasErrors(context);
 

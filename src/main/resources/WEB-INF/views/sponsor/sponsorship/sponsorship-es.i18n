@@ -25,6 +25,8 @@ sponsor.sponsorship.form.button.create = Crear
 
 sponsor.sponsorship.list.title = Patrocinios
 sponsor.sponsorship.form.title = Detalles del patrocinio
+sponsor.donation.form.button.create = Crear donación
+
 
 sponsor.donation.list.title = Donaciones
 sponsor.donation.form.title = Detalles de la donación
