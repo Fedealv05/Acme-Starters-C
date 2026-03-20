@@ -5,6 +5,10 @@ spokesperson.milestone.form.label.kind = Kind
 spokesperson.milestone.form.label.achievements = Achievements
 spokesperson.milestone.form.label.effort = Effort
 
+spokesperson.milestone.form.button.create = Create
+spokesperson.milestone.form.button.update= Update
+spokesperson.milestone.form.button.delete = Delete
+
 spokesperson.milestone.form.title = Milestone
 
 #Milestone List #######################################################
@@ -12,5 +16,7 @@ spokesperson.milestone.form.title = Milestone
 spokesperson.milestone.list.label.title = Title
 spokesperson.milestone.list.label.kind = Kind
 spokesperson.milestone.list.label.effort = Effort
+
+spokesperson.milestone.list.button.create= Create
 
 spokesperson.milestone.list.title = Milestones

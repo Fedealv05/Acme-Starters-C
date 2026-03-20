@@ -31,7 +31,8 @@ public class AnyMilestoneShowService extends AbstractService<Any, Milestone> {
 
 	@Override
 	public void authorise() {
-		boolean status = true;
+		boolean status;
+		status = this.milestone != null && !this.milestone.getCampaign().getDraftMode();
 		super.setAuthorised(status);
 	}
 

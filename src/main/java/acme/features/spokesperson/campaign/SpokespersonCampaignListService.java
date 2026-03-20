@@ -30,13 +30,13 @@ public class SpokespersonCampaignListService extends AbstractService<Spokesperso
 
 	@Override
 	public void authorise() {
-		boolean status = true;
+		boolean status = this.campaigns.stream().map(i -> i.getSpokesperson().getId()).allMatch(i -> i == super.getRequest().getPrincipal().getActiveRealm().getId());
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.campaigns, "ticker", "name", "startMoment", "endMoment");
+		super.unbindObjects(this.campaigns, "ticker", "name", "startMoment", "endMoment", "draftMode");
 	}
 
 }

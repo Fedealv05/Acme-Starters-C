@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.client.services.AbstractService;
 import acme.entities.campaigns.Campaign;
 import acme.entities.campaigns.Milestone;
+import acme.features.spokesperson.campaign.SpokespersonCampaignRepository;
 import acme.realms.Spokesperson;
 
 @Service
@@ -17,34 +18,34 @@ public class SpokespersonMilestoneListService extends AbstractService<Spokespers
 	@Autowired
 	private SpokespersonMilestoneRepository	repository;
 
+	@Autowired
+	private SpokespersonCampaignRepository	campaignRepository;
+
 	private List<Milestone>					milestones;
 
-	private int								campaignId;
+	private Campaign						campaign;
 
 
 	@Override
 	public void load() {
 
-		this.campaignId = super.getRequest().getData("campaignId", int.class);
-		this.milestones = this.repository.findByCampaignId(this.campaignId);
+		int id = this.getRequest().getData("campaignId", int.class);
+
+		this.campaign = this.campaignRepository.findCampaignById(id);
+		this.milestones = this.repository.findByCampaignId(id);
 	}
 
 	@Override
 	public void authorise() {
-		boolean status;
-		int spokespersonId;
-		Campaign campaign;
-
-		campaign = this.repository.findCampaignById(this.campaignId);
-		spokespersonId = super.getRequest().getPrincipal().getActiveRealm().getId();
-
-		status = campaign != null && campaign.getSpokesperson().getId() == spokespersonId;
+		boolean status = this.campaign != null && this.campaign.getSpokesperson().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
 		super.unbindObjects(this.milestones, "title", "effort", "kind");
+		super.unbindGlobal("draftMode", this.campaign.getDraftMode());
+		super.unbindGlobal("campaignId", this.campaign.getId());
 	}
 
 }

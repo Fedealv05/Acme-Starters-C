@@ -19,6 +19,11 @@ public class SpokespersonCampaignController extends AbstractController<Spokesper
 		super.setMediaType(MediaType.TEXT_HTML);
 		super.addBasicCommand("list", SpokespersonCampaignListService.class);
 		super.addBasicCommand("show", SpokespersonCampaignShowService.class);
+		super.addBasicCommand("create", SpokespersonCampaignCreateService.class);
+		super.addBasicCommand("update", SpokespersonCampaignUpdateService.class);
+		super.addBasicCommand("delete", SpokespersonCampaignDeleteService.class);
+
+		super.addCustomCommand("publish", "update", SpokespersonCampaignPublishService.class);
 
 	}
 

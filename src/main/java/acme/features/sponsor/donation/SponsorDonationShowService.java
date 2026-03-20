@@ -30,10 +30,16 @@ public class SponsorDonationShowService extends AbstractService<Sponsor, Donatio
 
 	@Override
 	public void authorise() {
-		boolean status;
-		int sponsorId;
-		sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		status = this.donation != null && this.donation.getSponsorship().getSponsor().getId() == sponsorId;
+		boolean status = false;
+
+		if (this.donation != null) {
+			int sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
+
+			boolean isOwner = this.donation.getSponsorship().getSponsor().getId() == sponsorId;
+			boolean isPublished = !this.donation.getSponsorship().getDraftMode();
+
+			status = isOwner || isPublished;
+		}
 
 		super.setAuthorised(status);
 	}
