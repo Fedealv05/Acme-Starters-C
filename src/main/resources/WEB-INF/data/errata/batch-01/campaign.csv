@@ -1,4 +1,4 @@
-key,key:spokesPerson,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+key,key:spokesperson,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
 campaign-01,spokesperson-01,F,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
 campaign-02,spokesperson-01,FI26:FIN001,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
 campaign-03,spokesperson-01,FI26-,Banca Segura 2026,Campaña sobre educación financiera y ciberseguridad para clientes senior.,2026/04/01 10:00,2026/10/01 10:00,https://www.bancasegura.com,true
