@@ -11,11 +11,12 @@
 acme.validation.header.message  	= Must have from 1 to 75 characters
 acme.validation.text.message   		= Must have from 1 to 255 characters
 acme.validation.phone.message       = Must match +country-code (area-code) phone-number, where only the phone-number is mandatory 
-acme.validation.ticker.message 		= The ticker must be between 5 and 15 characters long and contain only alphanumeric characters, hyphens, or underscores
-
+acme.validation.ticker.message = The ticker must follow the format XX99-YYYYY (2 uppercase letters, 2 digits, a hyphen, and between 5 and 10 alphanumeric characters).
 acme.validation.strategy.duplicated-ticker.message 	= A strategy with this ticker already exists
 acme.validation.strategy.timeInterval.message 		= The end date must be strictly after the start date
 acme.validation.strategy.tactics.message 			= You cannot publish a strategy that does not have at least one tactic
+
+acme.validation.tactic.percentage.message = The sum of the expected percentages of all tactics cannot exceed 100%
 
 
 acme.validation.sponsorship.duplicated-ticker.message 	= A sponsorship with this ticker already exists

@@ -1,6 +1,8 @@
 
 package acme.features.fundraiser.tactic;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,11 +38,19 @@ public class FundraiserTacticCreateService extends AbstractService<Fundraiser, T
 	@Override
 	public void authorise() {
 		boolean status;
-		boolean createdByThePrincipal;
 
-		createdByThePrincipal = this.tactic.getStrategy().getFundraiser().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+		int strategyId = super.getRequest().getData("strategyId", int.class);
 
-		status = createdByThePrincipal && this.tactic.getStrategy().getDraftMode();
+		Strategy strategy = this.repository.findStrategyById(strategyId);
+
+		if (strategy != null) {
+			boolean isOwner = strategy.getFundraiser().getId() == super.getRequest().getPrincipal().getActiveRealm().getId();
+
+			boolean isDraft = strategy.getDraftMode();
+
+			status = isOwner && isDraft;
+		} else
+			status = false;
 
 		super.setAuthorised(status);
 	}
@@ -53,6 +63,23 @@ public class FundraiserTacticCreateService extends AbstractService<Fundraiser, T
 	@Override
 	public void validate() {
 		super.validateObject(this.tactic);
+
+		if (this.tactic.getExpectedPercentage() != null) {
+			Collection<Tactic> existingTactics = this.repository.findManyByStrategyId(this.tactic.getStrategy().getId());
+
+			double totalPercentage = 0.0;
+
+			if (existingTactics != null)
+				for (Tactic t : existingTactics)
+					if (t.getId() != this.tactic.getId())
+						totalPercentage += t.getExpectedPercentage();
+
+			totalPercentage += this.tactic.getExpectedPercentage();
+
+			boolean validPercentage = totalPercentage <= 100.0;
+
+			super.state(validPercentage, "expectedPercentage", "acme.validation.tactic.percentage.message");
+		}
 	}
 
 	@Override
