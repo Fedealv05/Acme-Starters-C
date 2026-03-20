@@ -13,3 +13,4 @@ authenticated.fundraiser.form.label.statement = Declaración
 authenticated.fundraiser.form.label.agent = ¿Es agente?
 authenticated.fundraiser.form.button.create = Crear
 authenticated.fundraiser.form.button.update = Actualizar
+authenticated.fundraiser.form.title = Detalles del recaudador 
