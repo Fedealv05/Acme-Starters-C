@@ -13,4 +13,6 @@ public interface StrategyRepository extends AbstractRepository {
 	@Query("SELECT s FROM Strategy s WHERE s.ticker = :ticker")
 	Strategy findStrategyByTicker(@Param("ticker") String ticker);
 
+	@Query("select sum(t.expectedPercentage) from Tactic t where t.strategy.id = :id")
+	Double sumPercentageByStrategyId(int id);
 }

@@ -11,11 +11,11 @@
 	<acme:form-moment code="fundraiser.strategy.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="fundraiser.strategy.form.label.moreInfo" path="moreInfo"/>
 	
-	<jstl:if test="${_command == 'show'}">
-		<acme:form-textbox code="fundraiser.strategy.form.label.monthsActive" path="monthsActive" readonly="true"/>
-		<acme:form-textbox code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage" readonly="true"/>
+	<jstl:if test="${_command != 'create'}">
+				<acme:form-textbox code="fundraiser.strategy.form.label.monthsActive" path="monthsActive" readonly="true"/>
+				<acme:form-textbox code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage" readonly="true"/>		
 	</jstl:if>
-
+	
 	<jstl:choose>
 		<jstl:when test="${_command == 'show' && draftMode == false}">
 			<acme:button code="fundraiser.strategy.form.button.tactics" action="/fundraiser/tactic/list?strategyId=${id}"/>

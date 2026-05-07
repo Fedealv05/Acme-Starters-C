@@ -1,24 +1,24 @@
 
 package acme.entities.strategy;
 
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
@@ -33,6 +33,10 @@ import lombok.Setter;
 @Setter
 @ValidStrategy
 public class Strategy extends AbstractEntity {
+
+	@Transient
+	@Autowired
+	private StrategyRepository	repository;
 
 	private static final long	serialVersionUID	= 1L;
 
@@ -67,37 +71,36 @@ public class Strategy extends AbstractEntity {
 	private String				moreInfo;
 
 	@Mandatory
+	@Valid
 	@Column
 	private Boolean				draftMode;
 
-	// Relaciones -------------------------------------------------------------
 
-	@NotNull
+	@Mandatory
 	@Valid
-	@ManyToOne(optional = false)
-	private Fundraiser			fundraiser;
-
-	@OneToMany(mappedBy = "strategy")
-	private Collection<Tactic>	tactics;
-
-
 	@Transient
 	public Double getMonthsActive() {
-		double result = 0.0;
-		if (this.startMoment != null && this.endMoment != null) {
-			long diff = this.endMoment.getTime() - this.startMoment.getTime();
-			result = diff / (1000.0 * 60 * 60 * 24 * 30);
-			result = Math.round(result * 10.0) / 10.0;
-		}
-		return result;
+		if (this.endMoment == null || this.startMoment == null)
+			return 0.0;
+		long diffMillis = this.endMoment.getTime() - this.startMoment.getTime();
+		double meses = diffMillis / (1000.0 * 60 * 60 * 24 * 30);
+		return Math.round(meses * 10.0) / 10.0;
 	}
 
+	@Mandatory
+	@ValidScore
 	@Transient
 	public Double getExpectedPercentage() {
-		double result = 0.0;
-		if (this.tactics != null)
-			for (final Tactic t : this.tactics)
-				result += t.getExpectedPercentage();
-		return result;
+		if (this.repository == null)
+			return 0.0;
+		Double total = this.repository.sumPercentageByStrategyId(this.getId());
+		return total != null ? total : 0.0;
 	}
+
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Fundraiser fundraiser;
+
 }
